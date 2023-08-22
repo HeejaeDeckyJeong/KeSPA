@@ -1,0 +1,42 @@
+@charset "UTF-8";
+@import 'variables', 'mixin', 'fonts', 'reset', 'main', 'contents';
+
+// comm.scss(css) -
+// 공통요소 : header, footer, button, icon, box
+
+// 공통
+.wrap {
+    padding-top: 0px;
+}
+.container {
+    padding: 0 $bothMargin;
+}
+header {
+    position: fixed;
+    z-index: 1;
+    margin-top: 30px;
+    margin-left: 209px;
+}
+
+.page1 {
+    background: url(/page1.png) no-repeat;
+}
+.page2 {
+    background: url(/page2.png) no-repeat;
+}
+.page3 {
+    background: url(/page3.png) no-repeat;
+}
+.page4 {
+    background: url(/page4.png) no-repeat;
+}
+.section {
+    background-size: cover;
+}
+
+// footer
+#footer {
+    .inner {
+        border-top: 10px solid $gray-e;
+    }
+}
