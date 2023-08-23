@@ -3,11 +3,12 @@
 $('#fullpage').fullpage({
     scrollBar: true,
     responsiveWidth: 300,
-    navigation: true,
-    navigationTooltips: ['home', 'event', 'best', 'celeb', '#', '#', '#'],
-    anchors: ['home', 'event', 'best', 'celeb', 'a', 'b', 'c'],
+    navigation: false,
+    navigationTooltips: ['a', 'b', 'c', 'd'],
+    anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
     menu: '#myMenu',
     fitToSection: false,
+    navigationPosition: 'le',
 
     afterLoad: function (anchorLink, index) {
         var loadedSection = $(this);
