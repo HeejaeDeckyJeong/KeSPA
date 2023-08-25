@@ -424,6 +424,12 @@ legend {
   padding: 0 4%;
 }
 
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
 header {
   position: fixed;
   z-index: 1;
@@ -437,28 +443,108 @@ header {
 
 .page2 {
   position: relative;
-  background: url(/images/hof.webp) no-repeat center;
+  z-index: 0;
+  background: url(/images/hof.webp) 0 0/cover no-repeat;
 }
-.page2 #hofShadow {
+.page2::before {
+  content: "";
   position: absolute;
+  z-index: -1;
   top: 0;
   left: 0;
-  transform: translateX(-4px);
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(to right, #000, rgba(0, 0, 0, 0));
+}
+.page2 .contents {
+  display: block;
+  width: 500px;
+}
+.page2 .contents span,
+.page2 .contents p,
+.page2 .contents h2,
+.page2 .contents a {
+  font-family: "Noto Sans KR", sans-serif;
+  margin-top: 55px;
+}
+.page2 p,
+.page2 span {
+  font-size: 18px;
+}
+.page2 h2 {
+  font-size: 60px;
+}
+.page2 a {
+  display: flex;
+  font-size: 16px;
+  align-items: center;
+}
+.page2 a::after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 25px;
+  background: #fff;
+  margin-left: 10px;
+  transform: translateY(1px);
+}
+.page2 a p {
+  margin-bottom: 20px;
 }
 
 .page3 {
   position: relative;
-  background: #000;
+  background: url(../../images/bnrNews2.png) 0 0/auto 100% no-repeat, url(../../images/waterMark.png) 100% 100%/auto 338px no-repeat;
+  background-color: #000;
 }
-.page3 #bnrNews {
-  position: absolute;
-  top: 0;
-  bottom: 0;
+.page3 .contents {
+  display: flex;
+  justify-content: space-around;
 }
-.page3 #waterMark {
-  position: absolute;
-  right: 0;
-  bottom: 0;
+.page3 .contents .headline {
+  display: block;
+}
+.page3 .contents .headline span,
+.page3 .contents .headline p,
+.page3 .contents .headline h2,
+.page3 .contents .headline a {
+  font-family: "Noto Sans KR", sans-serif;
+  margin-top: 55px;
+}
+.page3 .contents .headline p,
+.page3 .contents .headline span {
+  font-size: 18px;
+}
+.page3 .contents .headline h2 {
+  font-size: 60px;
+  margin-bottom: 80px;
+}
+.page3 .contents .headline a {
+  display: flex;
+  font-size: 16px;
+  align-items: center;
+}
+.page3 .contents .headline a::after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 25px;
+  background: #fff;
+  margin-left: 10px;
+  transform: translateY(1px);
+}
+.page3 .contents .bbs {
+  width: 60%;
+  font-size: 15px;
+}
+.page3 .contents .bbs ul {
+  margin-bottom: 2px;
+}
+.page3 .contents .bbs ul li {
+  margin-bottom: 20px;
+}
+.page3 .contents .bbs ul li:first-child {
+  font-size: 26px;
 }
 
 .page4 {
@@ -466,15 +552,16 @@ header {
 }
 
 .section {
-  background-size: cover;
-  min-height: 1080px;
+  height: 100vh;
   overflow: hidden;
 }
 .section .inner {
-  display: flex;
   margin: auto;
-  max-width: 1500px;
-  height: 100%;
+  margin-top: -300px;
+  max-width: 1440px;
+}
+.section .inner .contents * {
+  color: #ffffff;
 }
 
 #myMenu {
@@ -545,7 +632,7 @@ header {
 /*YOUTUBE VIDEO*/
 .youtube {
   position: relative;
-  height: 1080px;
+  height: 100vh;
   background-color: #333;
   overflow: hidden;
 }

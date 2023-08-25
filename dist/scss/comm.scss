@@ -11,6 +11,12 @@
 .container {
     padding: 0 $bothMargin;
 }
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
 header {
     position: fixed;
     z-index: 1;
@@ -22,26 +28,108 @@ header {
 }
 .page2 {
     position: relative;
-    background: url(/images/hof.webp) no-repeat center;
-    #hofShadow {
+    z-index: 0;
+    background: url(/images/hof.webp) 0 0 / cover no-repeat;
+    &::before {
+        content: '';
         position: absolute;
+        z-index: -1;
         top: 0;
         left: 0;
-        transform: translateX(-4px);
-    }
-}
-.page3 {
-    position: relative;
-    background: #000;
-    #bnrNews {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-    }
-    #waterMark {
-        position: absolute;
         right: 0;
         bottom: 0;
+        background-image: linear-gradient(to right, $b, rgba($b, 0));
+    }
+    .contents {
+        display: block;
+        width: 500px;
+        span,
+        p,
+        h2,
+        a {
+            font-family: 'Noto Sans KR', sans-serif;
+            margin-top: 55px;
+        }
+    }
+    p,
+    span {
+        font-size: 18px;
+    }
+    h2 {
+        font-size: 60px;
+    }
+    a {
+        display: flex;
+        font-size: 16px;
+        align-items: center;
+        &::after {
+            content: '';
+            width: 7px;
+            height: 7px;
+            border-radius: 25px;
+            background: #fff;
+            margin-left: 10px;
+            transform: translateY(1px);
+        }
+        p {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.page3 {
+    position: relative;
+    background: url(../../images/bnrNews2.png) 0 0 / auto 100% no-repeat,
+        url(../../images/waterMark.png) 100% 100% / auto 338px no-repeat;
+    background-color: #000;
+    .contents {
+        display: flex;
+        justify-content: space-around;
+        .headline {
+            display: block;
+            span,
+            p,
+            h2,
+            a {
+                font-family: 'Noto Sans KR', sans-serif;
+                margin-top: 55px;
+            }
+            p,
+            span {
+                font-size: 18px;
+            }
+            h2 {
+                font-size: 60px;
+                margin-bottom: 80px;
+            }
+            a {
+                display: flex;
+                font-size: 16px;
+                align-items: center;
+                &::after {
+                    content: '';
+                    width: 7px;
+                    height: 7px;
+                    border-radius: 25px;
+                    background: #fff;
+                    margin-left: 10px;
+                    transform: translateY(1px);
+                }
+            }
+        }
+        .bbs {
+            width: 60%;
+            font-size: 15px;
+            ul {
+                margin-bottom: 2px;
+                li {
+                    margin-bottom: 20px;
+                }
+                & li:first-child {
+                    font-size: 26px;
+                }
+            }
+        }
     }
 }
 .page4 {
@@ -49,14 +137,15 @@ header {
 }
 
 .section {
-    background-size: cover;
-    min-height: 1080px;
+    height: 100vh;
     overflow: hidden;
     .inner {
-        display: flex;
         margin: auto;
-        max-width: 1500px;
-        height: 100%;
+        margin-top: -300px;
+        max-width: 1440px;
+        .contents * {
+            color: #ffffff;
+        }
     }
 }
 #myMenu {
@@ -133,7 +222,7 @@ header {
 
 .youtube {
     position: relative;
-    height: 1080px;
+    height: 100vh;
     background-color: #333;
     overflow: hidden;
 
