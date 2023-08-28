@@ -438,7 +438,68 @@ header {
 }
 
 .page1 {
-  background: url(/page1.png) no-repeat;
+  position: relative;
+}
+.page1 .youtube {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+.page1 .contents {
+  display: block;
+  margin-top: 38%;
+  max-width: 1000px;
+}
+.page1 .contents span,
+.page1 .contents p,
+.page1 .contents h2,
+.page1 .contents a {
+  font-family: "Noto Sans KR", sans-serif;
+  margin-top: 55px;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3490196078) !important;
+}
+.page1 p,
+.page1 span {
+  font-size: 50px;
+}
+.page1 h2 {
+  transform: translateX(-20px);
+  font-size: 100px;
+}
+
+.pagedown {
+  position: relative;
+  top: 5%;
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+.pagedown .rotating-text {
+  fill: #fff;
+  animation: rotate 10s linear infinite;
+  transform-origin: 50% 50%;
+  transition: 1s fill;
+}
+.pagedown i {
+  color: #fff;
+  position: absolute;
+  top: 106px;
+  left: 115px;
+  font-size: 67px;
+  transition: 1s;
+}
+
+a:hover > .rotating-text {
+  animation-play-state: paused;
+  fill: #e60296;
+}
+a:hover > i {
+  color: #e60296;
 }
 
 .page2 {
@@ -466,6 +527,7 @@ header {
 .page2 .contents a {
   font-family: "Noto Sans KR", sans-serif;
   margin-top: 55px;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3490196078) !important;
 }
 .page2 p,
 .page2 span {
@@ -494,37 +556,41 @@ header {
 
 .page3 {
   position: relative;
-  background: url(../../images/bnrNews2.png) 0 0/auto 100% no-repeat, url(../../images/waterMark.png) 100% 100%/auto 338px no-repeat;
+  background: url(../../images/bnrNews2.png) -5% 0/auto 100% no-repeat, url(../../images/waterMark.png) 100% 100%/auto 338px no-repeat;
   background-color: #000;
 }
-.page3 .contents {
+.page3 .inner {
+  display: flex;
+}
+.page3 .inner .contents {
   display: flex;
   justify-content: space-around;
 }
-.page3 .contents .headline {
+.page3 .inner .contents .headline {
   display: block;
 }
-.page3 .contents .headline span,
-.page3 .contents .headline p,
-.page3 .contents .headline h2,
-.page3 .contents .headline a {
+.page3 .inner .contents .headline span,
+.page3 .inner .contents .headline p,
+.page3 .inner .contents .headline h2,
+.page3 .inner .contents .headline a {
   font-family: "Noto Sans KR", sans-serif;
   margin-top: 55px;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3490196078) !important;
 }
-.page3 .contents .headline p,
-.page3 .contents .headline span {
+.page3 .inner .contents .headline p,
+.page3 .inner .contents .headline span {
   font-size: 18px;
 }
-.page3 .contents .headline h2 {
+.page3 .inner .contents .headline h2 {
   font-size: 60px;
   margin-bottom: 80px;
 }
-.page3 .contents .headline a {
+.page3 .inner .contents .headline a {
   display: flex;
   font-size: 16px;
   align-items: center;
 }
-.page3 .contents .headline a::after {
+.page3 .inner .contents .headline a::after {
   content: "";
   width: 7px;
   height: 7px;
@@ -533,18 +599,23 @@ header {
   margin-left: 10px;
   transform: translateY(1px);
 }
-.page3 .contents .bbs {
-  width: 60%;
+.page3 .inner .contents .bbs {
+  max-width: 70%;
+  padding-left: 170px;
   font-size: 15px;
-}
-.page3 .contents .bbs ul {
   margin-bottom: 2px;
 }
-.page3 .contents .bbs ul li {
+.page3 .inner .contents .bbs li {
   margin-bottom: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.page3 .contents .bbs ul li:first-child {
+.page3 .inner .contents .bbs li:first-child {
   font-size: 26px;
+}
+.page3 .inner .contents .item {
+  border-bottom: rgba(238, 238, 238, 0.137254902) 1px solid;
 }
 
 .page4 {
@@ -564,69 +635,68 @@ header {
   color: #ffffff;
 }
 
-#myMenu {
-  display: flex;
-  width: 200px;
+.scroll_nav {
+  display: block;
   position: fixed;
-  bottom: 30px;
-  transform: translateX(30px);
+  bottom: 50px;
+  left: 100px;
+  z-index: 500;
 }
-#myMenu li {
-  margin-right: 20px;
-}
-#myMenu li.active a {
-  font-size: 15px;
-  padding-left: 10px;
-}
-#myMenu li.active a::before {
-  position: absolute;
-  top: 16px;
-  right: 30px;
-  content: "";
-  display: block;
-  margin-right: 5px;
-  width: 6px;
-  height: 6px;
-  background: #e60296;
-  border-radius: 25px;
-}
-#myMenu li a {
-  position: relative;
+.scroll_nav ul {
   display: flex;
-  width: 40px;
-  height: 40px;
-  color: #e60296;
-  padding-left: 3px;
-  align-items: center;
-  font-size: 0;
 }
-#myMenu li a:hover {
-  padding-left: 3px;
-  font-size: 15px;
+.scroll_nav ul li {
+  position: relative;
+  font-weight: bold;
+  font-size: 14px;
+  margin-right: 10px;
+  color: #000;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  padding-left: 15px;
+  cursor: pointer;
+  width: auto;
+  transition: 0.5s;
 }
-#myMenu li a:hover::before {
-  position: absolute;
-  top: 16px;
-  right: 30px;
+.scroll_nav ul li span {
+  display: inline-block;
+  width: 0;
+  overflow: hidden;
+}
+.scroll_nav ul li::after {
   content: "";
-  display: block;
-  margin-right: 20px;
+  position: absolute;
+  top: 37%;
+  left: 0;
+  transform: translateY(-50%);
   width: 6px;
   height: 6px;
-  background: #e60296;
-  border-radius: 25px;
+  box-sizing: border-box;
+  border: 1px solid #999;
+  border-radius: 50%;
+  transition: 0.5s;
 }
-#myMenu li a::before {
-  position: absolute;
-  top: 16px;
-  right: 30px;
-  content: "";
-  display: block;
-  margin-right: 20px;
-  width: 6px;
-  height: 6px;
-  background: #ffffff;
-  border-radius: 25px;
+.scroll_nav ul li.active::after {
+  background: #e60296 !important;
+  border-color: #e60296 !important;
+}
+.scroll_nav ul li:hover::after {
+  background: #999;
+  border-color: #999;
+}
+.scroll_nav ul li span {
+  display: inline-block;
+  width: 0;
+  overflow: hidden;
+}
+.scroll_nav ul li.active span {
+  color: #e60296 !important;
+  width: 100%;
+}
+.scroll_nav ul li:hover span {
+  color: #999;
+  transition: all 0.3s;
+  width: 100%;
 }
 
 /*YOUTUBE VIDEO*/
