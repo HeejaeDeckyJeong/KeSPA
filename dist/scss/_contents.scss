@@ -1,3 +1,59 @@
-.contents {
-  height: 300px;
+.display {
+    background: #000;
+}
+@keyframes shake {
+    25% {
+        transform: rotate(calc(5deg * -1));
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.item {
+    --width: 100%;
+    --time: 1s;
+    position: relative;
+    display: flex;
+    padding: 1em;
+    color: white;
+    overflow: hidden;
+
+    ul li {
+        position: relative;
+        z-index: 5;
+        transition: color 1s;
+    }
+
+    &:hover ul li {
+        color: #222;
+    }
+
+    span {
+        position: absolute;
+        display: block;
+        content: '';
+        z-index: 0;
+        width: 0;
+        height: 0;
+        border-radius: 100%;
+        background: #fff;
+        transform: translate(-50%, -50%);
+        transition: width 1s, padding-top 1s;
+    }
+
+    &:hover span {
+        width: 200%;
+        padding-top: 200%;
+    }
+}
+
+.animated {
+    --angle: 5deg;
+    animation: shake 0.3s;
 }
