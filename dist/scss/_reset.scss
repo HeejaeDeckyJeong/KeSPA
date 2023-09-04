@@ -31,6 +31,7 @@ main,
 footer,
 article {
     margin: 0;
+    color: #ffffff;
     padding: 0;
     box-sizing: border-box;
 }
@@ -43,6 +44,7 @@ ul,
 ol,
 menu,
 li {
+    color: #ffffff;
     list-style: none;
 }
 blockquote,
@@ -123,7 +125,7 @@ body {
 
 /* color값은 디자인가이드에 맞게사용 */
 a {
-    color: #333;
+    color: #ffffff;
     text-decoration: none;
 }
 a:active,

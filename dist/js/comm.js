@@ -137,7 +137,7 @@ ELEMENTS.forEach((element, index) => {
 
     element.addEventListener('mouseover', (e) => {
         ELEMENTS_SPAN[index].style.left = e.pageX - element.offsetLeft + 'px';
-        ELEMENTS_SPAN[index].style.top = e.pageY - element.offsetTop + 'px';
+        ELEMENTS_SPAN[index].style.top = e.pageY - element.offsetTop + 3 * 'px';
 
         // Add an animation-class to animate via CSS.
         if (addAnimation) element.classList.add(ANIMATEDCLASSNAME);
@@ -145,6 +145,6 @@ ELEMENTS.forEach((element, index) => {
 
     element.addEventListener('mouseout', (e) => {
         ELEMENTS_SPAN[index].style.left = e.pageX - element.offsetLeft + 'px';
-        ELEMENTS_SPAN[index].style.top = e.pageY - element.offsetTop + 'px';
+        ELEMENTS_SPAN[index].style.top = e.pageY - element.offsetTop + 2 * 'px';
     });
 });
