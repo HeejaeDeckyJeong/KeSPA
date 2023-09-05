@@ -349,14 +349,19 @@ header {
   font-family: "Noto Sans KR", sans-serif;
   margin-top: 55px;
   text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3490196078) !important;
+  overflow: hidden;
+  transition: line-height 1.5s cubic-bezier(0.77, 0, 0.175, 1);
+  line-height: 3.5;
 }
 .page1 p,
 .page1 span {
+  height: 60px;
   font-size: 50px;
 }
 .page1 h2 {
   transform: translateX(-20px);
   font-size: 100px;
+  height: 110px;
 }
 
 .pagedown {
@@ -437,6 +442,24 @@ a:hover > i {
 .page2 a p {
   margin-bottom: 20px;
 }
+.page2 .headline span,
+.page2 .headline p,
+.page2 .headline h2,
+.page2 .headline a {
+  overflow: hidden;
+  transition: line-height 1.5s cubic-bezier(0.77, 0, 0.175, 1);
+  line-height: 3.5;
+}
+.page2 .headline span {
+  height: 15px;
+  line-height: 11;
+}
+.page2 .headline h2 {
+  height: 130px;
+}
+.page2 .headline p {
+  height: 80px;
+}
 
 @keyframes shake {
   25% {
@@ -513,18 +536,40 @@ a:hover > i {
 }
 
 .page4 {
-  background: url(/page4.png) no-repeat;
+  position: relative;
+  z-index: 0;
+  background: url(../../images/huangzhou.png) 0 0/cover no-repeat;
 }
-.page4 .section {
-  height: 100vh;
-  overflow: hidden;
-}
-.page4 .section .inner {
-  margin: auto;
+.page4 .inner {
   max-width: 1440px;
+  margin: 0 auto;
 }
-.page4 .section .inner .contents * {
-  color: #ffffff;
+.page4 .contents {
+  display: block;
+  width: 500px;
+}
+.page4 .contents span,
+.page4 .contents p,
+.page4 .contents h2,
+.page4 .contents a {
+  font-family: "Noto Sans KR", sans-serif;
+  margin-top: 55px;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3490196078) !important;
+}
+.page4 p,
+.page4 span {
+  font-size: 18px;
+}
+.page4 h2 {
+  font-size: 60px;
+}
+.page4 a {
+  display: flex;
+  font-size: 16px;
+  align-items: center;
+}
+.page4 a p {
+  margin-bottom: 20px;
 }
 
 .scroll_nav {
@@ -914,6 +959,16 @@ a:hover > i {
   display: flex;
   justify-content: center;
   position: absolute;
-  top: calc(50% - 2px);
+  top: 50%;
   left: 50%;
+}
+
+.section.active .inner .contents span,
+.section.active .inner .contents p,
+.section.active .inner .contents h2,
+.section.active .inner .contents a {
+  line-height: 1;
+}
+.section.active .inner .contents h2 {
+  transition-delay: 0.4s;
 }/*# sourceMappingURL=comm.css.map */

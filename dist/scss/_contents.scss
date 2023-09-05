@@ -178,6 +178,18 @@
     display: flex;
     justify-content: center;
     position: absolute;
-    top: calc(50% - 2px);
+    top: 50%;
     left: 50%;
+}
+
+.section.active .inner .contents {
+    span,
+    p,
+    h2,
+    a {
+        line-height: 1;
+    }
+    h2 {
+        transition-delay: 0.4s;
+    }
 }
