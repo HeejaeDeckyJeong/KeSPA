@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+.hofPage1 {
+    background: url(../../images/indexHOF.png) 0 0 / cover no-repeat;
+    .contents {
+        display: block;
+        max-width: 1000px;
+        span,
+        p,
+        h2,
+        a {
+            font-family: 'Anton', sans-serif;
+            height: 120px;
+        }
+        p {
+            font-size: 100px;
+        }
+        h2 {
+            margin-top: 0;
+            font-size: 110px;
+        }
+    }
+}
+.hofPage2 {
+    background: url(../../images/composition.png) 0 0 / cover no-repeat;
+}

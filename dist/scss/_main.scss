@@ -1,119 +1,341 @@
-.slide-intro {
-    margin-top: -70px;
+@charset "UTF-8";
 
-  .swiper-slide__txt {
-    position: absolute;
-    z-index: 1;
-    // top: auto;
-    // left: auto;
-    top: 50%;
-    left: 50%;
-    width: 50%;
-    transform: translate(-50%, -50%);
-    color: $w;
-    strong {
-      font-size: 35px;
-    }
-    p {
-      font-size: 16px;
-      opacity: 0.8;
-    }
-    a {
-      display: inline-block;
-      top: 30px;
-      padding: 0 20px;
-      color: $b;
-      background: $w;
-      font-size: 0.8571rem;
-      border: 1px solid rgba($w, 0.3);
-      border-radius: 30px;
-      line-height: 30px;
-      margin-top: 20px;
-    }
-  }
-}
-
-.list-event {
-  li {
-    margin-bottom: 50px;
-  }
-  img {
-    display: block;
-    width: 100%;
-    height: 300px;
-    margin-bottom: 10px;
-    object-fit: cover;
-    object-position: 50% 80%;
-  }
-  p {
-    text-align: center;
-    font-size: 1.1429rem;
-  }
-}
-
-//   텍스트 게시판
-//   이미지 게시판
-.lst-thumb {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  li {
-    width: calc(50% - $spacingList / 2);
-    margin-bottom: $spacingList;
-    .thumb-shopping {
-      position: relative;
-      overflow: hidden;
-      width: 100%;
-      // height: 200px;
-      border-radius: 4px;
-      &::before {
-        content: "";
-        display: block;
-        height: 0;
-        padding-top: 100%;
-      }
-      &::after {
-        content: "";
+.indexPage1 {
+    .youtube {
         position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+    }
+    .contents {
+        display: block;
+        max-width: 1000px;
+        span,
+        p,
+        h2,
+        a {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+    }
+}
+
+.pagedown {
+    position: relative;
+    top: 5%;
+    @keyframes rotate {
+        100% {
+            transform: rotate(1turn);
+        }
+    }
+
+    .rotating-text {
+        fill: #fff;
+        animation: rotate 10s linear infinite;
+        transform-origin: 50% 50%;
+        transition: 1s fill;
+    }
+
+    i {
+        color: #fff;
+        position: absolute;
+        top: 106px;
+        left: 115px;
+        font-size: 67px;
+        transition: 1s;
+    }
+}
+
+a:hover {
+    & > .rotating-text {
+        animation-play-state: paused;
+        fill: #e60296;
+    }
+    & > i {
+        color: #e60296;
+    }
+}
+
+.indexPage2 {
+    background: url(/images/hof.webp) 0 0 / cover no-repeat;
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: -10;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
-        border-radius: inherit;
-        background: rgba($b, 0.03);
-        border: 1px solid rgba($b, 0.06);
-      }
+        background-image: linear-gradient(to right, $b, rgba($b, 0));
     }
-    img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: 50% 50%;
-      transition: transform 0.3s;
+    .contents {
+        display: block;
+        width: 500px;
+        span,
+        p,
+        h2,
+        a {
+            font-family: 'Noto Sans KR', sans-serif;
+            margin-top: 55px;
+            text-shadow: 0px 0px 5px #00000059 !important;
+        }
     }
-  }
-  a {
-    &:hover {
-      img {
-        transform: scale(1.05);
-      }
+    p,
+    span {
+        font-size: 18px;
     }
-  }
-  .txt-shopping {
-    margin-top: 10px;
-    .txt-shopping__tit {
-      display: block;
-      margin-bottom: 5px;
-      font-size: 14px;
-      color: $titDefault;
+    h2 {
+        font-size: 60px;
     }
-    .txt-shopping__desc {
-      font-size: 12px;
+    a {
+        display: flex;
+        font-size: 16px;
+        align-items: center;
+
+        p {
+            margin-bottom: 20px;
+        }
     }
-  }
+    .headline {
+        span,
+        p,
+        h2,
+        a {
+            overflow: hidden;
+            transition: line-height 1.5s cubic-bezier(0.77, 0, 0.175, 1);
+            line-height: 3.5;
+        }
+        span {
+            height: 15px;
+            line-height: 11;
+        }
+        h2 {
+            height: 130px;
+        }
+        p {
+            height: 80px;
+        }
+    }
+}
+//
+@keyframes shake {
+    25% {
+        transform: rotate(calc(5deg * -1));
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.indexPage3 {
+    background: url(../../images/bnrNews2.png) -5% 0 / auto 100% no-repeat,
+        url(../../images/waterMark.png) 100% 100% / auto 338px no-repeat;
+    background-color: #000;
+
+    .inner {
+        display: flex;
+        margin-top: 100px;
+        .contents {
+            display: flex;
+            justify-content: space-around;
+            .headline {
+                display: block;
+
+                span,
+                p,
+                h2,
+                a {
+                    font-family: 'Noto Sans KR', sans-serif;
+                    margin-top: 55px;
+                    text-shadow: 0px 0px 5px #00000059 !important;
+                }
+                p,
+                span {
+                    font-size: 18px;
+                }
+                h2 {
+                    font-size: 60px;
+                    margin-bottom: 80px;
+                }
+                a {
+                    display: flex;
+                    font-size: 16px;
+                    align-items: center;
+                    &::after {
+                        content: '';
+                        width: 7px;
+                        height: 7px;
+                        border-radius: 25px;
+                        background: #fff;
+                        margin-left: 10px;
+                        transform: translateY(1px);
+                    }
+                }
+            }
+            .display {
+                max-width: 70%;
+                font-size: 15px;
+                margin-bottom: 2px;
+
+                li {
+                    margin-bottom: 20px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                & li:first-child {
+                    font-size: 26px;
+                }
+            }
+        }
+    }
+}
+.indexPage4 {
+    background: url(../../images/huangzhou.png) 0 0 / cover no-repeat;
+
+    .contents {
+        display: block;
+        width: 500px;
+        span,
+        p,
+        h2,
+        a {
+            font-family: 'Noto Sans KR', sans-serif;
+            margin-top: 55px;
+            text-shadow: 0px 0px 5px #00000059 !important;
+        }
+    }
+    p,
+    span {
+        font-size: 18px;
+    }
+    h2 {
+        font-size: 60px;
+    }
+    a {
+        display: flex;
+        font-size: 16px;
+        align-items: center;
+
+        p {
+            margin-bottom: 20px;
+        }
+    }
+}
+.scroll_nav {
+    display: block;
+    position: fixed;
+    bottom: 50px;
+    left: 100px;
+    z-index: 500;
+
+    ul {
+        display: flex;
+
+        li {
+            position: relative;
+            font-weight: bold;
+            font-size: 14px;
+            margin-right: 10px;
+            color: #000;
+            text-transform: uppercase;
+            box-sizing: border-box;
+            padding-left: 15px;
+            cursor: pointer;
+            width: auto;
+            transition: 0.5s;
+            span {
+                display: inline-block;
+                width: 0;
+                overflow: hidden;
+            }
+        }
+        li::after {
+            content: '';
+            position: absolute;
+            top: 37%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 6px;
+            height: 6px;
+            box-sizing: border-box;
+            border: 1px solid #999;
+            border-radius: 50%;
+            transition: 0.5s;
+        }
+        li.active::after {
+            background: #e60296 !important;
+            border-color: #e60296 !important;
+        }
+        li:hover::after {
+            background: #999;
+            border-color: #999;
+        }
+        li span {
+            display: inline-block;
+            width: 0;
+            overflow: hidden;
+        }
+        li.active span {
+            color: #e60296 !important;
+            width: 100%;
+        }
+        li:hover span {
+            color: #999;
+            transition: all 0.3s;
+            width: 100%;
+        }
+    }
+}
+
+.youtube {
+    position: relative;
+    height: 100vh;
+    background-color: #333;
+    overflow: hidden;
+
+    .youtube__area {
+        width: 1920px;
+        position: absolute;
+
+        /* 16비율 */
+        left: 50%;
+        margin-left: calc(1920px / -2);
+
+        // /* 9비율 */
+        top: 50%;
+        margin-top: calc(1920px * 9 / 16 / -2);
+
+        &::before {
+            content: '';
+            display: block;
+            /* 16:9 영상 비율로 요소 크기 만들기! */
+            width: 100%;
+            height: 0;
+            padding-top: 56.25%;
+        }
+    }
+
+    .youtube__cover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+}
+
+#player {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }

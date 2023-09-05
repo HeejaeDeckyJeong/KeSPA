@@ -187,9 +187,24 @@
     p,
     h2,
     a {
-        line-height: 1;
+        line-height: 1.1;
     }
     h2 {
         transition-delay: 0.4s;
+    }
+}
+
+//
+@keyframes shake {
+    25% {
+        transform: rotate(calc(5deg * -1));
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
     }
 }

@@ -330,14 +330,6 @@ header {
   max-width: 1440px;
   margin: 0 auto;
 }
-.page1 .youtube {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: -1;
-}
 .page1 .contents {
   display: block;
   max-width: 1000px;
@@ -346,7 +338,6 @@ header {
 .page1 .contents p,
 .page1 .contents h2,
 .page1 .contents a {
-  font-family: "Noto Sans KR", sans-serif;
   margin-top: 55px;
   text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3490196078) !important;
   overflow: hidden;
@@ -362,6 +353,55 @@ header {
   transform: translateX(-20px);
   font-size: 100px;
   height: 110px;
+}
+
+.page2 {
+  position: relative;
+  z-index: 0;
+}
+.page2 .inner {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.page3 {
+  position: relative;
+}
+.page3 .inner {
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+.page4 {
+  position: relative;
+  z-index: 0;
+}
+.page4 .inner {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+#footer .inner {
+  border-top: 10px solid #eee;
+}
+
+.indexPage1 .youtube {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+.indexPage1 .contents {
+  display: block;
+  max-width: 1000px;
+}
+.indexPage1 .contents span,
+.indexPage1 .contents p,
+.indexPage1 .contents h2,
+.indexPage1 .contents a {
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 .pagedown {
@@ -396,16 +436,10 @@ a:hover > i {
   color: #e60296;
 }
 
-.page2 {
-  position: relative;
-  z-index: 0;
+.indexPage2 {
   background: url(/images/hof.webp) 0 0/cover no-repeat;
 }
-.page2 .inner {
-  max-width: 1440px;
-  margin: 0 auto;
-}
-.page2::before {
+.indexPage2::before {
   content: "";
   position: absolute;
   z-index: -10;
@@ -415,49 +449,49 @@ a:hover > i {
   bottom: 0;
   background-image: linear-gradient(to right, #000, rgba(0, 0, 0, 0));
 }
-.page2 .contents {
+.indexPage2 .contents {
   display: block;
   width: 500px;
 }
-.page2 .contents span,
-.page2 .contents p,
-.page2 .contents h2,
-.page2 .contents a {
+.indexPage2 .contents span,
+.indexPage2 .contents p,
+.indexPage2 .contents h2,
+.indexPage2 .contents a {
   font-family: "Noto Sans KR", sans-serif;
   margin-top: 55px;
   text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3490196078) !important;
 }
-.page2 p,
-.page2 span {
+.indexPage2 p,
+.indexPage2 span {
   font-size: 18px;
 }
-.page2 h2 {
+.indexPage2 h2 {
   font-size: 60px;
 }
-.page2 a {
+.indexPage2 a {
   display: flex;
   font-size: 16px;
   align-items: center;
 }
-.page2 a p {
+.indexPage2 a p {
   margin-bottom: 20px;
 }
-.page2 .headline span,
-.page2 .headline p,
-.page2 .headline h2,
-.page2 .headline a {
+.indexPage2 .headline span,
+.indexPage2 .headline p,
+.indexPage2 .headline h2,
+.indexPage2 .headline a {
   overflow: hidden;
   transition: line-height 1.5s cubic-bezier(0.77, 0, 0.175, 1);
   line-height: 3.5;
 }
-.page2 .headline span {
+.indexPage2 .headline span {
   height: 15px;
   line-height: 11;
 }
-.page2 .headline h2 {
+.indexPage2 .headline h2 {
   height: 130px;
 }
-.page2 .headline p {
+.indexPage2 .headline p {
   height: 80px;
 }
 
@@ -472,46 +506,43 @@ a:hover > i {
     transform: rotate(0deg);
   }
 }
-.page3 {
-  position: relative;
+.indexPage3 {
   background: url(../../images/bnrNews2.png) -5% 0/auto 100% no-repeat, url(../../images/waterMark.png) 100% 100%/auto 338px no-repeat;
   background-color: #000;
 }
-.page3 .inner {
+.indexPage3 .inner {
   display: flex;
-  margin: auto;
   margin-top: 100px;
-  max-width: 1440px;
 }
-.page3 .inner .contents {
+.indexPage3 .inner .contents {
   display: flex;
   justify-content: space-around;
 }
-.page3 .inner .contents .headline {
+.indexPage3 .inner .contents .headline {
   display: block;
 }
-.page3 .inner .contents .headline span,
-.page3 .inner .contents .headline p,
-.page3 .inner .contents .headline h2,
-.page3 .inner .contents .headline a {
+.indexPage3 .inner .contents .headline span,
+.indexPage3 .inner .contents .headline p,
+.indexPage3 .inner .contents .headline h2,
+.indexPage3 .inner .contents .headline a {
   font-family: "Noto Sans KR", sans-serif;
   margin-top: 55px;
   text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3490196078) !important;
 }
-.page3 .inner .contents .headline p,
-.page3 .inner .contents .headline span {
+.indexPage3 .inner .contents .headline p,
+.indexPage3 .inner .contents .headline span {
   font-size: 18px;
 }
-.page3 .inner .contents .headline h2 {
+.indexPage3 .inner .contents .headline h2 {
   font-size: 60px;
   margin-bottom: 80px;
 }
-.page3 .inner .contents .headline a {
+.indexPage3 .inner .contents .headline a {
   display: flex;
   font-size: 16px;
   align-items: center;
 }
-.page3 .inner .contents .headline a::after {
+.indexPage3 .inner .contents .headline a::after {
   content: "";
   width: 7px;
   height: 7px;
@@ -520,55 +551,49 @@ a:hover > i {
   margin-left: 10px;
   transform: translateY(1px);
 }
-.page3 .inner .contents .display {
+.indexPage3 .inner .contents .display {
   max-width: 70%;
   font-size: 15px;
   margin-bottom: 2px;
 }
-.page3 .inner .contents .display li {
+.indexPage3 .inner .contents .display li {
   margin-bottom: 20px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.page3 .inner .contents .display li:first-child {
+.indexPage3 .inner .contents .display li:first-child {
   font-size: 26px;
 }
 
-.page4 {
-  position: relative;
-  z-index: 0;
+.indexPage4 {
   background: url(../../images/huangzhou.png) 0 0/cover no-repeat;
 }
-.page4 .inner {
-  max-width: 1440px;
-  margin: 0 auto;
-}
-.page4 .contents {
+.indexPage4 .contents {
   display: block;
   width: 500px;
 }
-.page4 .contents span,
-.page4 .contents p,
-.page4 .contents h2,
-.page4 .contents a {
+.indexPage4 .contents span,
+.indexPage4 .contents p,
+.indexPage4 .contents h2,
+.indexPage4 .contents a {
   font-family: "Noto Sans KR", sans-serif;
   margin-top: 55px;
   text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3490196078) !important;
 }
-.page4 p,
-.page4 span {
+.indexPage4 p,
+.indexPage4 span {
   font-size: 18px;
 }
-.page4 h2 {
+.indexPage4 h2 {
   font-size: 60px;
 }
-.page4 a {
+.indexPage4 a {
   display: flex;
   font-size: 16px;
   align-items: center;
 }
-.page4 a p {
+.indexPage4 a p {
   margin-bottom: 20px;
 }
 
@@ -636,7 +661,6 @@ a:hover > i {
   width: 100%;
 }
 
-/*YOUTUBE VIDEO*/
 .youtube {
   position: relative;
   height: 100vh;
@@ -675,122 +699,6 @@ a:hover > i {
   position: absolute;
   top: 0;
   left: 0;
-}
-
-#footer .inner {
-  border-top: 10px solid #eee;
-}
-
-.slide-intro {
-  margin-top: -70px;
-}
-.slide-intro .swiper-slide__txt {
-  position: absolute;
-  z-index: 1;
-  top: 50%;
-  left: 50%;
-  width: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
-}
-.slide-intro .swiper-slide__txt strong {
-  font-size: 35px;
-}
-.slide-intro .swiper-slide__txt p {
-  font-size: 16px;
-  opacity: 0.8;
-}
-.slide-intro .swiper-slide__txt a {
-  display: inline-block;
-  top: 30px;
-  padding: 0 20px;
-  color: #000;
-  background: #fff;
-  font-size: 0.8571rem;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 30px;
-  line-height: 30px;
-  margin-top: 20px;
-}
-
-.list-event li {
-  margin-bottom: 50px;
-}
-.list-event img {
-  display: block;
-  width: 100%;
-  height: 300px;
-  margin-bottom: 10px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: 50% 80%;
-     object-position: 50% 80%;
-}
-.list-event p {
-  text-align: center;
-  font-size: 1.1429rem;
-}
-
-.lst-thumb {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.lst-thumb li {
-  width: calc(50% - 10px);
-  margin-bottom: 20px;
-}
-.lst-thumb li .thumb-shopping {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  border-radius: 4px;
-}
-.lst-thumb li .thumb-shopping::before {
-  content: "";
-  display: block;
-  height: 0;
-  padding-top: 100%;
-}
-.lst-thumb li .thumb-shopping::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: inherit;
-  background: rgba(0, 0, 0, 0.03);
-  border: 1px solid rgba(0, 0, 0, 0.06);
-}
-.lst-thumb li img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: 50% 50%;
-     object-position: 50% 50%;
-  transition: transform 0.3s;
-}
-.lst-thumb a:hover img {
-  transform: scale(1.05);
-}
-.lst-thumb .txt-shopping {
-  margin-top: 10px;
-}
-.lst-thumb .txt-shopping .txt-shopping__tit {
-  display: block;
-  margin-bottom: 5px;
-  font-size: 14px;
-  color: #101010;
-}
-.lst-thumb .txt-shopping .txt-shopping__desc {
-  font-size: 12px;
 }
 
 .display {
@@ -967,8 +875,45 @@ a:hover > i {
 .section.active .inner .contents p,
 .section.active .inner .contents h2,
 .section.active .inner .contents a {
-  line-height: 1;
+  line-height: 1.1;
 }
 .section.active .inner .contents h2 {
   transition-delay: 0.4s;
+}
+
+@keyframes shake {
+  25% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.hofPage1 {
+  background: url(../../images/indexHOF.png) 0 0/cover no-repeat;
+}
+.hofPage1 .contents {
+  display: block;
+  max-width: 1000px;
+}
+.hofPage1 .contents span,
+.hofPage1 .contents p,
+.hofPage1 .contents h2,
+.hofPage1 .contents a {
+  font-family: "Anton", sans-serif;
+  height: 120px;
+}
+.hofPage1 .contents p {
+  font-size: 100px;
+}
+.hofPage1 .contents h2 {
+  margin-top: 0;
+  font-size: 110px;
+}
+
+.hofPage2 {
+  background: url(../../images/composition.png) 0 0/cover no-repeat;
 }/*# sourceMappingURL=comm.css.map */
