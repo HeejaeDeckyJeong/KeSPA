@@ -23,4 +23,148 @@
 }
 .hofPage2 {
     background: url(../../images/composition.png) 0 0 / cover no-repeat;
+
+    .inner {
+        position: relative;
+        overflow: hidden;
+
+        .compositionBox_1,
+        .compositionBox_2,
+        .compositionBox_3,
+        .compositionBox_4,
+        .compositonTxt {
+            box-shadow: #00000072 1px 1px 1px 1px;
+            transform: translateX(3000px);
+            transition: transform 1.8s ease-out, width 0.3s linear;
+        }
+
+        .compositionBox_1 {
+            background: #111010 url(../../images/ex_img01.jpg) 0 0 / cover no-repeat;
+            transition-delay: 0.5s;
+        }
+        .compositionBox_2 {
+            background: #111010 url(../../images/ex_img02.jpg) 0 0 / cover no-repeat;
+            transition-delay: 0.6s;
+        }
+        .compositionBox_3 {
+            background: #111010 url(../../images/ex_img03.jpg) 0 0 / cover no-repeat;
+            transition-delay: 0.7s;
+        }
+        .compositionBox_4 {
+            background: #111010 url(../../images/ex_img04.jpg) 0 0 / cover no-repeat;
+            transition-delay: 0.8s;
+        }
+    }
+}
+.hofPage2.active {
+    .compositionBox_1,
+    .compositionBox_2,
+    .compositionBox_3,
+    .compositionBox_4,
+    .compositonTxt {
+        transform: translateX(0);
+    }
+    .compositionBox_1,
+    .compositionBox_2,
+    .compositionBox_3,
+    .compositionBox_4 {
+        position: relative;
+    }
+    .compositionBox {
+        display: flex;
+        max-width: 80%;
+        height: 400px;
+        margin: 0 auto;
+        justify-content: space-around;
+        align-items: end;
+        & > div {
+            display: flex;
+
+            width: 20%;
+            height: 400px;
+            border: 1px solid #00000086;
+            box-shadow: #00000072 1px 1px 1px 1px;
+            align-items: end;
+        }
+    }
+    .compositonTxt {
+        display: flex;
+        width: 80%;
+        height: auto;
+        margin: 0 auto;
+        justify-content: space-around;
+        span {
+            width: 20%;
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+    }
+}
+// hover 효과
+.hofPage2 {
+    .inner {
+        .compositionBox {
+            .compositionBox_1:hover {
+                width: 55%;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    z-index: 1;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: #000000ab;
+                }
+                & ~ .compositionBox_2 {
+                    width: 18%;
+                }
+                & ~ .compositionBox_3 {
+                    width: 18%;
+                }
+                & ~ .compositionBox_4 {
+                    width: 18%;
+                }
+            }
+            .compositionBox_2:hover {
+                width: 55%;
+                & ~ .compositionBox_1 {
+                    width: 18%;
+                }
+                & ~ .compositionBox_3 {
+                    width: 18%;
+                }
+                & ~ .compositionBox_4 {
+                    width: 18%;
+                }
+            }
+            .compositionBox_3:hover {
+                width: 55%;
+                & ~ .compositionBox_1 {
+                    width: 18%;
+                }
+                & ~ .compositionBox_2 {
+                    width: 18%;
+                }
+                & ~ .compositionBox_4 {
+                    width: 18%;
+                }
+            }
+            .compositionBox_4:hover {
+                width: 55%;
+                & ~ .compositionBox_1 {
+                    width: 18%;
+                }
+                & ~ .compositionBox_2 {
+                    width: 18%;
+                }
+                & ~ .compositionBox_3 {
+                    width: 18%;
+                }
+            }
+        }
+    }
+}
+.hofpage3 {
+    background: #000;
 }

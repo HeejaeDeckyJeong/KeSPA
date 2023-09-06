@@ -916,4 +916,138 @@ a:hover > i {
 
 .hofPage2 {
   background: url(../../images/composition.png) 0 0/cover no-repeat;
+}
+.hofPage2 .inner {
+  position: relative;
+  overflow: hidden;
+}
+.hofPage2 .inner .compositionBox_1,
+.hofPage2 .inner .compositionBox_2,
+.hofPage2 .inner .compositionBox_3,
+.hofPage2 .inner .compositionBox_4,
+.hofPage2 .inner .compositonTxt {
+  box-shadow: rgba(0, 0, 0, 0.4470588235) 1px 1px 1px 1px;
+  transform: translateX(3000px);
+  transition: transform 1.8s ease-out, width 0.3s linear;
+}
+.hofPage2 .inner .compositionBox_1 {
+  background: #111010 url(../../images/ex_img01.jpg) 0 0/cover no-repeat;
+  transition-delay: 0.5s;
+}
+.hofPage2 .inner .compositionBox_2 {
+  background: #111010 url(../../images/ex_img02.jpg) 0 0/cover no-repeat;
+  transition-delay: 0.6s;
+}
+.hofPage2 .inner .compositionBox_3 {
+  background: #111010 url(../../images/ex_img03.jpg) 0 0/cover no-repeat;
+  transition-delay: 0.7s;
+}
+.hofPage2 .inner .compositionBox_4 {
+  background: #111010 url(../../images/ex_img04.jpg) 0 0/cover no-repeat;
+  transition-delay: 0.8s;
+}
+
+.hofPage2.active .compositionBox_1,
+.hofPage2.active .compositionBox_2,
+.hofPage2.active .compositionBox_3,
+.hofPage2.active .compositionBox_4,
+.hofPage2.active .compositonTxt {
+  transform: translateX(0);
+}
+.hofPage2.active .compositionBox_1,
+.hofPage2.active .compositionBox_2,
+.hofPage2.active .compositionBox_3,
+.hofPage2.active .compositionBox_4 {
+  position: relative;
+}
+.hofPage2.active .compositionBox {
+  display: flex;
+  max-width: 80%;
+  height: 400px;
+  margin: 0 auto;
+  justify-content: space-around;
+  align-items: end;
+}
+.hofPage2.active .compositionBox > div {
+  display: flex;
+  width: 20%;
+  height: 400px;
+  border: 1px solid rgba(0, 0, 0, 0.5254901961);
+  box-shadow: rgba(0, 0, 0, 0.4470588235) 1px 1px 1px 1px;
+  align-items: end;
+}
+.hofPage2.active .compositonTxt {
+  display: flex;
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  justify-content: space-around;
+}
+.hofPage2.active .compositonTxt span {
+  width: 20%;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.hofPage2 .inner .compositionBox .compositionBox_1:hover {
+  width: 55%;
+}
+.hofPage2 .inner .compositionBox .compositionBox_1:hover::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6705882353);
+}
+.hofPage2 .inner .compositionBox .compositionBox_1:hover ~ .compositionBox_2 {
+  width: 18%;
+}
+.hofPage2 .inner .compositionBox .compositionBox_1:hover ~ .compositionBox_3 {
+  width: 18%;
+}
+.hofPage2 .inner .compositionBox .compositionBox_1:hover ~ .compositionBox_4 {
+  width: 18%;
+}
+.hofPage2 .inner .compositionBox .compositionBox_2:hover {
+  width: 55%;
+}
+.hofPage2 .inner .compositionBox .compositionBox_2:hover ~ .compositionBox_1 {
+  width: 18%;
+}
+.hofPage2 .inner .compositionBox .compositionBox_2:hover ~ .compositionBox_3 {
+  width: 18%;
+}
+.hofPage2 .inner .compositionBox .compositionBox_2:hover ~ .compositionBox_4 {
+  width: 18%;
+}
+.hofPage2 .inner .compositionBox .compositionBox_3:hover {
+  width: 55%;
+}
+.hofPage2 .inner .compositionBox .compositionBox_3:hover ~ .compositionBox_1 {
+  width: 18%;
+}
+.hofPage2 .inner .compositionBox .compositionBox_3:hover ~ .compositionBox_2 {
+  width: 18%;
+}
+.hofPage2 .inner .compositionBox .compositionBox_3:hover ~ .compositionBox_4 {
+  width: 18%;
+}
+.hofPage2 .inner .compositionBox .compositionBox_4:hover {
+  width: 55%;
+}
+.hofPage2 .inner .compositionBox .compositionBox_4:hover ~ .compositionBox_1 {
+  width: 18%;
+}
+.hofPage2 .inner .compositionBox .compositionBox_4:hover ~ .compositionBox_2 {
+  width: 18%;
+}
+.hofPage2 .inner .compositionBox .compositionBox_4:hover ~ .compositionBox_3 {
+  width: 18%;
+}
+
+.hofpage3 {
+  background: #000;
 }/*# sourceMappingURL=comm.css.map */
