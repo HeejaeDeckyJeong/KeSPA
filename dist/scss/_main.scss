@@ -9,9 +9,13 @@
         right: 0;
         z-index: -1;
     }
+    .inner {
+        height: 50%;
+    }
     .contents {
         display: block;
         max-width: 1000px;
+
         span,
         p,
         h2,
@@ -23,7 +27,7 @@
 
 .pagedown {
     position: relative;
-    top: 5%;
+    top: 0;
     @keyframes rotate {
         100% {
             transform: rotate(1turn);

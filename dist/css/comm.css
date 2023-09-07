@@ -381,6 +381,26 @@ header {
   margin: 0 auto;
 }
 
+.first-item p {
+  animation-name: txtSlideUp;
+  animation-duration: 0.3s;
+}
+.first-item h2 {
+  animation-name: txtSlideUp;
+  animation-duration: 0.5s;
+  animation-delay: 0.2s;
+}
+
+@keyframes txtSlideUp {
+  0% {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 #footer .inner {
   border-top: 10px solid #eee;
 }
@@ -392,6 +412,9 @@ header {
   left: 0;
   right: 0;
   z-index: -1;
+}
+.indexPage1 .inner {
+  height: 50%;
 }
 .indexPage1 .contents {
   display: block;
@@ -406,7 +429,7 @@ header {
 
 .pagedown {
   position: relative;
-  top: 5%;
+  top: 0;
 }
 @keyframes rotate {
   100% {
@@ -915,7 +938,7 @@ a:hover > i {
 }
 
 .hofPage2 {
-  background: url(../../images/composition.png) 0 0/cover no-repeat;
+  background: #000;
 }
 .hofPage2 .inner {
   position: relative;
@@ -924,34 +947,66 @@ a:hover > i {
 .hofPage2 .inner .compositionBox_1,
 .hofPage2 .inner .compositionBox_2,
 .hofPage2 .inner .compositionBox_3,
-.hofPage2 .inner .compositionBox_4,
-.hofPage2 .inner .compositonTxt {
+.hofPage2 .inner .compositionBox_4 {
+  position: relative;
+  overflow: visible;
   box-shadow: rgba(0, 0, 0, 0.4470588235) 1px 1px 1px 1px;
   transform: translateX(3000px);
-  transition: transform 1.8s ease-out, width 0.3s linear;
+  transition: transform 0.8s ease-out, width 0.8ms ease-out;
+}
+.hofPage2 .inner .compositionBox_1 .compositionText,
+.hofPage2 .inner .compositionBox_2 .compositionText,
+.hofPage2 .inner .compositionBox_3 .compositionText,
+.hofPage2 .inner .compositionBox_4 .compositionText {
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  margin: 0 auto;
+  transform: translateX(-50%);
+  justify-content: space-around;
+  z-index: 999;
+  line-height: 2;
+  flex-direction: column;
+}
+.hofPage2 .inner .compositionBox_1 .compositionText .comp_cont,
+.hofPage2 .inner .compositionBox_2 .compositionText .comp_cont,
+.hofPage2 .inner .compositionBox_3 .compositionText .comp_cont,
+.hofPage2 .inner .compositionBox_4 .compositionText .comp_cont {
+  margin-top: 16px;
+  opacity: 0;
+  transition: opacity 0.1ms;
+  white-space: nowrap;
+}
+.hofPage2 .inner .compositionBox_1 .comp_name,
+.hofPage2 .inner .compositionBox_2 .comp_name,
+.hofPage2 .inner .compositionBox_3 .comp_name,
+.hofPage2 .inner .compositionBox_4 .comp_name {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 20%;
+  z-index: 1000;
+  font-size: 20px;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 .hofPage2 .inner .compositionBox_1 {
-  background: #111010 url(../../images/ex_img01.jpg) 0 0/cover no-repeat;
-  transition-delay: 0.5s;
+  background: #111010 url(../../images/ex_img01.jpg) 0 center/cover no-repeat;
 }
 .hofPage2 .inner .compositionBox_2 {
-  background: #111010 url(../../images/ex_img02.jpg) 0 0/cover no-repeat;
-  transition-delay: 0.6s;
+  background: #111010 url(../../images/ex_img02.jpg) 0 center/cover no-repeat;
 }
 .hofPage2 .inner .compositionBox_3 {
-  background: #111010 url(../../images/ex_img03.jpg) 0 0/cover no-repeat;
-  transition-delay: 0.7s;
+  background: #111010 url(../../images/ex_img03.jpg) 0 center/cover no-repeat;
 }
 .hofPage2 .inner .compositionBox_4 {
-  background: #111010 url(../../images/ex_img04.jpg) 0 0/cover no-repeat;
-  transition-delay: 0.8s;
+  background: #111010 url(../../images/ex_img04.jpg) 0 center/cover no-repeat;
 }
 
 .hofPage2.active .compositionBox_1,
 .hofPage2.active .compositionBox_2,
 .hofPage2.active .compositionBox_3,
-.hofPage2.active .compositionBox_4,
-.hofPage2.active .compositonTxt {
+.hofPage2.active .compositionBox_4 {
   transform: translateX(0);
 }
 .hofPage2.active .compositionBox_1,
@@ -960,15 +1015,31 @@ a:hover > i {
 .hofPage2.active .compositionBox_4 {
   position: relative;
 }
-.hofPage2.active .compositionBox {
+.hofPage2.active .compositionBox_1::after,
+.hofPage2.active .compositionBox_2::after,
+.hofPage2.active .compositionBox_3::after,
+.hofPage2.active .compositionBox_4::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  background: rgba(0, 0, 0, 0.6705882353);
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.hofPage2 .inner .compositionBox {
   display: flex;
   max-width: 80%;
   height: 400px;
-  margin: 0 auto;
+  margin: 100px auto 0;
   justify-content: space-around;
   align-items: end;
 }
-.hofPage2.active .compositionBox > div {
+.hofPage2 .inner .compositionBox > div {
   display: flex;
   width: 20%;
   height: 400px;
@@ -976,19 +1047,6 @@ a:hover > i {
   box-shadow: rgba(0, 0, 0, 0.4470588235) 1px 1px 1px 1px;
   align-items: end;
 }
-.hofPage2.active .compositonTxt {
-  display: flex;
-  width: 80%;
-  height: auto;
-  margin: 0 auto;
-  justify-content: space-around;
-}
-.hofPage2.active .compositonTxt span {
-  width: 20%;
-  font-size: 20px;
-  text-transform: uppercase;
-}
-
 .hofPage2 .inner .compositionBox .compositionBox_1:hover {
   width: 55%;
 }
@@ -996,11 +1054,15 @@ a:hover > i {
   content: "";
   position: absolute;
   z-index: 1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.6705882353);
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  background: rgba(0, 0, 0, 0.8588235294);
+  opacity: 1;
+}
+.hofPage2 .inner .compositionBox .compositionBox_1:hover .compositionText .comp_cont {
+  opacity: 1;
 }
 .hofPage2 .inner .compositionBox .compositionBox_1:hover ~ .compositionBox_2 {
   width: 18%;
@@ -1014,6 +1076,20 @@ a:hover > i {
 .hofPage2 .inner .compositionBox .compositionBox_2:hover {
   width: 55%;
 }
+.hofPage2 .inner .compositionBox .compositionBox_2:hover::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  background: rgba(0, 0, 0, 0.8588235294);
+  opacity: 1;
+}
+.hofPage2 .inner .compositionBox .compositionBox_2:hover .compositionText .comp_cont {
+  opacity: 1;
+}
 .hofPage2 .inner .compositionBox .compositionBox_2:hover ~ .compositionBox_1 {
   width: 18%;
 }
@@ -1025,6 +1101,20 @@ a:hover > i {
 }
 .hofPage2 .inner .compositionBox .compositionBox_3:hover {
   width: 55%;
+}
+.hofPage2 .inner .compositionBox .compositionBox_3:hover::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  background: rgba(0, 0, 0, 0.8588235294);
+  opacity: 1;
+}
+.hofPage2 .inner .compositionBox .compositionBox_3:hover .compositionText .comp_cont {
+  opacity: 1;
 }
 .hofPage2 .inner .compositionBox .compositionBox_3:hover ~ .compositionBox_1 {
   width: 18%;
@@ -1038,6 +1128,20 @@ a:hover > i {
 .hofPage2 .inner .compositionBox .compositionBox_4:hover {
   width: 55%;
 }
+.hofPage2 .inner .compositionBox .compositionBox_4:hover::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  background: rgba(0, 0, 0, 0.8588235294);
+  opacity: 1;
+}
+.hofPage2 .inner .compositionBox .compositionBox_4:hover .compositionText .comp_cont {
+  opacity: 1;
+}
 .hofPage2 .inner .compositionBox .compositionBox_4:hover ~ .compositionBox_1 {
   width: 18%;
 }
@@ -1050,4 +1154,69 @@ a:hover > i {
 
 .hofpage3 {
   background: #000;
+}
+.hofpage3 .inner {
+  display: flex;
+  flex-direction: column;
+}
+.hofpage3 .inner .contents {
+  width: 80%;
+  height: 100%;
+  margin: 40px auto 0;
+}
+.hofpage3 .inner .contents .hof_bnr_info {
+  display: flex;
+  flex-direction: column;
+  background: url(../../images/info_box.jpg) 0 0/cover no-repeat;
+  width: 100%;
+  height: 40%;
+  justify-content: center;
+  align-items: center;
+}
+.hofpage3 .inner .contents .hof_bnr_info span {
+  color: #0162ff;
+  margin-bottom: 18px;
+}
+.hofpage3 .inner .contents .infobox {
+  display: flex;
+  justify-content: space-around;
+}
+.hofpage3 .inner .contents .infobox > div {
+  position: relative;
+  width: 32%;
+  margin-top: 50px;
+  padding-left: 12px;
+}
+.hofpage3 .inner .contents .infobox > div ul li {
+  list-style-type: circle;
+  margin-top: 3px;
+}
+.hofpage3 .inner .contents .infobox > div ul li:first-child {
+  margin-top: 20px;
+}
+.hofpage3 .inner .contents .infobox > div::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: -15px;
+  width: 1px;
+  height: 80%;
+  background: #eee;
+}
+.hofpage3 .inner .contents .infobox > div:first-child::before {
+  display: none;
+}
+
+.inner {
+  padding-top: 100px;
+  height: calc(100% - 100px);
+}
+.inner .hof_tit .hof_tit1 {
+  font-family: "Noto Sans KR", sans-serif;
+  color: #0162ff;
+}
+.inner .hof_tit .hof_tit2 {
+  font-family: "Anton", sans-serif;
+  color: #fff;
+  text-transform: uppercase;
 }/*# sourceMappingURL=comm.css.map */
