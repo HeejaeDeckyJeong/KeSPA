@@ -25,6 +25,7 @@ $('#fullpage').fullpage({
             $('.header-links').css('background-color', 'transparent');
             $('.logo-w').css('display', 'block');
             $('#myMenu').css('display', 'none');
+            $('.myMenu2').css('display', 'flex');
             $('.navTrigger > i').css('background-color', 'white');
         } else if (index != 1) {
             $('.header-links a').each(function () {
@@ -32,7 +33,6 @@ $('#fullpage').fullpage({
             });
             $('.header-links').css('background-color', 'white');
 
-            $('.logo-w').css('display', 'none');
             $('#myMenu').css('display', 'flex');
             $('.navTrigger > i').css('background-color', 'black');
         }

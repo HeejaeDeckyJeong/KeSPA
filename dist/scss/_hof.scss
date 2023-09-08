@@ -5,6 +5,7 @@
     .contents {
         display: block;
         max-width: 1000px;
+        margin-top: 200px;
         span,
         p,
         h2,
@@ -253,6 +254,7 @@
                 height: 40%;
                 justify-content: center;
                 align-items: center;
+                line-height: 1.1;
 
                 span {
                     color: #0162ff;
@@ -292,6 +294,57 @@
                         }
                     }
                 }
+                .infobox2 {
+                    a {
+                        display: flex;
+                        width: 146px;
+                        height: 61px;
+                        margin-top: 20px;
+                        background: #2547fc;
+                        justify-content: center;
+                        align-items: center;
+                        box-shadow: 1px 1px #3d3838;
+                    }
+                }
+            }
+        }
+    }
+}
+.hofpage4 {
+    background: #000;
+    .inner {
+        position: relative;
+        .contents {
+            font-family: 'Anton', sans-serif;
+            position: absolute;
+            bottom: 150px;
+            line-height: 1.1;
+            h2,
+            p {
+                font-size: 36px;
+            }
+            .txtLocation1 {
+                display: flex;
+                align-items: end;
+                p {
+                    color: #0162ff;
+                }
+            }
+            .txtLocation2 {
+                margin-top: 19px;
+                font-size: 19px;
+                h3 {
+                    font-family: 'Noto Sans KR', sans-serif;
+                }
+            }
+        }
+        .map {
+            .googlemap {
+                position: absolute;
+                width: 800px;
+                height: 600px;
+                top: 100px;
+                right: 0;
             }
         }
     }
@@ -310,4 +363,12 @@
             text-transform: uppercase;
         }
     }
+}
+
+.hof_nav ul li.active::after {
+    background: #458dff !important;
+    border-color: #458dff !important;
+}
+.hof_nav ul li.active span {
+    color: #458dff !important;
 }
