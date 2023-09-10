@@ -1,345 +1,346 @@
 @charset "UTF-8";
+.indexwrap {
+    .indexPage1 {
+        .youtube {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: -1;
+        }
+        .inner {
+            height: 50%;
+        }
+        .contents {
+            display: block;
+            max-width: 1000px;
 
-.indexPage1 {
-    .youtube {
-        position: absolute;
+            span,
+            p,
+            h2,
+            a {
+                font-family: 'Noto Sans KR', sans-serif;
+            }
+        }
+    }
+
+    .pagedown {
+        position: relative;
         top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: -1;
-    }
-    .inner {
-        height: 50%;
-    }
-    .contents {
-        display: block;
-        max-width: 1000px;
+        @keyframes rotate {
+            100% {
+                transform: rotate(1turn);
+            }
+        }
 
-        span,
+        .rotating-text {
+            fill: #fff;
+            animation: rotate 10s linear infinite;
+            transform-origin: 50% 50%;
+            transition: 1s fill;
+        }
+
+        i {
+            color: #fff;
+            position: absolute;
+            top: 106px;
+            left: 115px;
+            font-size: 67px;
+            transition: 1s;
+        }
+    }
+
+    a:hover {
+        & > .rotating-text {
+            animation-play-state: paused;
+            fill: #e60296;
+        }
+        & > i {
+            color: #e60296;
+        }
+    }
+
+    .indexPage2 {
+        background: url(/images/hof.webp) 0 0 / cover no-repeat;
+        &::before {
+            content: '';
+            position: absolute;
+            z-index: -10;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: linear-gradient(to right, $b, rgba($b, 0));
+        }
+        .contents {
+            display: block;
+            width: 500px;
+            span,
+            p,
+            h2,
+            a {
+                font-family: 'Noto Sans KR', sans-serif;
+                margin-top: 55px;
+                text-shadow: 0px 0px 5px #00000059 !important;
+            }
+        }
         p,
-        h2,
-        a {
-            font-family: 'Noto Sans KR', sans-serif;
-        }
-    }
-}
-
-.pagedown {
-    position: relative;
-    top: 0;
-    @keyframes rotate {
-        100% {
-            transform: rotate(1turn);
-        }
-    }
-
-    .rotating-text {
-        fill: #fff;
-        animation: rotate 10s linear infinite;
-        transform-origin: 50% 50%;
-        transition: 1s fill;
-    }
-
-    i {
-        color: #fff;
-        position: absolute;
-        top: 106px;
-        left: 115px;
-        font-size: 67px;
-        transition: 1s;
-    }
-}
-
-a:hover {
-    & > .rotating-text {
-        animation-play-state: paused;
-        fill: #e60296;
-    }
-    & > i {
-        color: #e60296;
-    }
-}
-
-.indexPage2 {
-    background: url(/images/hof.webp) 0 0 / cover no-repeat;
-    &::before {
-        content: '';
-        position: absolute;
-        z-index: -10;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-image: linear-gradient(to right, $b, rgba($b, 0));
-    }
-    .contents {
-        display: block;
-        width: 500px;
-        span,
-        p,
-        h2,
-        a {
-            font-family: 'Noto Sans KR', sans-serif;
-            margin-top: 55px;
-            text-shadow: 0px 0px 5px #00000059 !important;
-        }
-    }
-    p,
-    span {
-        font-size: 18px;
-    }
-    h2 {
-        font-size: 60px;
-    }
-    a {
-        display: flex;
-        font-size: 16px;
-        align-items: center;
-
-        p {
-            margin-bottom: 20px;
-        }
-    }
-    .headline {
-        span,
-        p,
-        h2,
-        a {
-            overflow: hidden;
-            transition: line-height 1.5s cubic-bezier(0.77, 0, 0.175, 1);
-            line-height: 3.5;
-        }
         span {
-            height: 15px;
-            line-height: 11;
+            font-size: 18px;
         }
         h2 {
-            height: 130px;
+            font-size: 60px;
         }
-        p {
-            height: 80px;
-        }
-    }
-}
-//
-@keyframes shake {
-    25% {
-        transform: rotate(calc(5deg * -1));
-    }
-
-    50% {
-        transform: rotate(5deg);
-    }
-
-    100% {
-        transform: rotate(0deg);
-    }
-}
-
-.indexPage3 {
-    background: url(../../images/bnrNews2.png) -5% 0 / auto 100% no-repeat,
-        url(../../images/waterMark.png) 100% 100% / auto 338px no-repeat;
-    background-color: #000;
-
-    .inner {
-        display: flex;
-        margin-top: 100px;
-        .contents {
+        a {
             display: flex;
-            justify-content: space-around;
-            .headline {
-                display: block;
+            font-size: 16px;
+            align-items: center;
 
-                span,
-                p,
-                h2,
-                a {
-                    font-family: 'Noto Sans KR', sans-serif;
-                    margin-top: 55px;
-                    text-shadow: 0px 0px 5px #00000059 !important;
+            p {
+                margin-bottom: 20px;
+            }
+        }
+        .headline {
+            span,
+            p,
+            h2,
+            a {
+                overflow: hidden;
+                transition: line-height 1.5s cubic-bezier(0.77, 0, 0.175, 1);
+                line-height: 3.5;
+            }
+            span {
+                height: 15px;
+                line-height: 11;
+            }
+            h2 {
+                height: 130px;
+            }
+            p {
+                height: 80px;
+            }
+        }
+    }
+    //
+    @keyframes shake {
+        25% {
+            transform: rotate(calc(5deg * -1));
+        }
+
+        50% {
+            transform: rotate(5deg);
+        }
+
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+
+    .indexPage3 {
+        background: url(../../images/bnrNews2.png) -5% 0 / auto 100% no-repeat,
+            url(../../images/waterMark.png) 100% 100% / auto 338px no-repeat;
+        background-color: #000;
+
+        .inner {
+            display: flex;
+            margin-top: 100px;
+            .contents {
+                display: flex;
+                justify-content: space-around;
+                .headline {
+                    display: block;
+
+                    span,
+                    p,
+                    h2,
+                    a {
+                        font-family: 'Noto Sans KR', sans-serif;
+                        margin-top: 55px;
+                        text-shadow: 0px 0px 5px #00000059 !important;
+                    }
+                    p,
+                    span {
+                        font-size: 18px;
+                    }
+                    h2 {
+                        font-size: 60px;
+                        margin-bottom: 80px;
+                    }
+                    a {
+                        display: flex;
+                        font-size: 16px;
+                        align-items: center;
+                        &::after {
+                            content: '';
+                            width: 7px;
+                            height: 7px;
+                            border-radius: 25px;
+                            background: #fff;
+                            margin-left: 10px;
+                            transform: translateY(1px);
+                        }
+                    }
                 }
-                p,
-                span {
-                    font-size: 18px;
-                }
-                h2 {
-                    font-size: 60px;
-                    margin-bottom: 80px;
-                }
-                a {
-                    display: flex;
-                    font-size: 16px;
-                    align-items: center;
-                    &::after {
-                        content: '';
-                        width: 7px;
-                        height: 7px;
-                        border-radius: 25px;
-                        background: #fff;
-                        margin-left: 10px;
-                        transform: translateY(1px);
+                .display {
+                    max-width: 70%;
+                    font-size: 15px;
+                    margin-bottom: 2px;
+
+                    li {
+                        margin-bottom: 20px;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                    & li:first-child {
+                        font-size: 26px;
                     }
                 }
             }
-            .display {
-                max-width: 70%;
-                font-size: 15px;
-                margin-bottom: 2px;
+        }
+    }
+    .indexPage4 {
+        background: url(../../images/huangzhou.png) 0 0 / cover no-repeat;
 
-                li {
-                    margin-bottom: 20px;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                }
-                & li:first-child {
-                    font-size: 26px;
-                }
+        .contents {
+            display: block;
+            width: 500px;
+            span,
+            p,
+            h2,
+            a {
+                font-family: 'Noto Sans KR', sans-serif;
+                margin-top: 55px;
+                text-shadow: 0px 0px 5px #00000059 !important;
+            }
+        }
+        p,
+        span {
+            font-size: 18px;
+        }
+        h2 {
+            font-size: 60px;
+        }
+        a {
+            display: flex;
+            font-size: 16px;
+            align-items: center;
+
+            p {
+                margin-bottom: 20px;
             }
         }
     }
-}
-.indexPage4 {
-    background: url(../../images/huangzhou.png) 0 0 / cover no-repeat;
-
-    .contents {
+    .scroll_nav {
         display: block;
-        width: 500px;
-        span,
-        p,
-        h2,
-        a {
-            font-family: 'Noto Sans KR', sans-serif;
-            margin-top: 55px;
-            text-shadow: 0px 0px 5px #00000059 !important;
-        }
-    }
-    p,
-    span {
-        font-size: 18px;
-    }
-    h2 {
-        font-size: 60px;
-    }
-    a {
-        display: flex;
-        font-size: 16px;
-        align-items: center;
+        position: fixed;
+        bottom: 50px;
+        left: 100px;
+        z-index: 500;
 
-        p {
-            margin-bottom: 20px;
-        }
-    }
-}
-.scroll_nav {
-    display: block;
-    position: fixed;
-    bottom: 50px;
-    left: 100px;
-    z-index: 500;
+        ul {
+            display: flex;
 
-    ul {
-        display: flex;
-
-        li {
-            position: relative;
-            font-weight: bold;
-            font-size: 14px;
-            margin-right: 10px;
-            color: #000;
-            text-transform: uppercase;
-            box-sizing: border-box;
-            padding-left: 15px;
-            cursor: pointer;
-            width: auto;
-            transition: 0.5s;
-            span {
+            li {
+                position: relative;
+                font-weight: bold;
+                font-size: 14px;
+                margin-right: 10px;
+                color: #000;
+                text-transform: uppercase;
+                box-sizing: border-box;
+                padding-left: 15px;
+                cursor: pointer;
+                width: auto;
+                transition: 0.5s;
+                span {
+                    display: inline-block;
+                    width: 0;
+                    overflow: hidden;
+                }
+            }
+            li::after {
+                content: '';
+                position: absolute;
+                top: 37%;
+                left: 0;
+                transform: translateY(-50%);
+                width: 6px;
+                height: 6px;
+                box-sizing: border-box;
+                border: 1px solid #999;
+                border-radius: 50%;
+                transition: 0.5s;
+            }
+            li.active::after {
+                background: #e60296 !important;
+                border-color: #e60296 !important;
+            }
+            li:hover::after {
+                background: #999;
+                border-color: #999;
+            }
+            li span {
                 display: inline-block;
                 width: 0;
                 overflow: hidden;
             }
+            li.active span {
+                color: #e60296 !important;
+                width: 100%;
+            }
+            li:hover span {
+                color: #999;
+                transition: all 0.3s;
+                width: 100%;
+            }
         }
-        li::after {
-            content: '';
+    }
+
+    .youtube {
+        position: relative;
+        height: 100vh;
+        background-color: #333;
+        overflow: hidden;
+
+        .youtube__area {
+            width: 1920px;
             position: absolute;
-            top: 37%;
+
+            /* 16비율 */
+            left: 50%;
+            margin-left: calc(1920px / -2);
+
+            // /* 9비율 */
+            top: 50%;
+            margin-top: calc(1920px * 9 / 16 / -2);
+
+            &::before {
+                content: '';
+                display: block;
+                /* 16:9 영상 비율로 요소 크기 만들기! */
+                width: 100%;
+                height: 0;
+                padding-top: 56.25%;
+            }
+        }
+
+        .youtube__cover {
+            position: absolute;
+            top: 0;
             left: 0;
-            transform: translateY(-50%);
-            width: 6px;
-            height: 6px;
-            box-sizing: border-box;
-            border: 1px solid #999;
-            border-radius: 50%;
-            transition: 0.5s;
-        }
-        li.active::after {
-            background: #e60296 !important;
-            border-color: #e60296 !important;
-        }
-        li:hover::after {
-            background: #999;
-            border-color: #999;
-        }
-        li span {
-            display: inline-block;
-            width: 0;
-            overflow: hidden;
-        }
-        li.active span {
-            color: #e60296 !important;
             width: 100%;
-        }
-        li:hover span {
-            color: #999;
-            transition: all 0.3s;
-            width: 100%;
-        }
-    }
-}
-
-.youtube {
-    position: relative;
-    height: 100vh;
-    background-color: #333;
-    overflow: hidden;
-
-    .youtube__area {
-        width: 1920px;
-        position: absolute;
-
-        /* 16비율 */
-        left: 50%;
-        margin-left: calc(1920px / -2);
-
-        // /* 9비율 */
-        top: 50%;
-        margin-top: calc(1920px * 9 / 16 / -2);
-
-        &::before {
-            content: '';
-            display: block;
-            /* 16:9 영상 비율로 요소 크기 만들기! */
-            width: 100%;
-            height: 0;
-            padding-top: 56.25%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
         }
     }
 
-    .youtube__cover {
+    #player {
+        width: 100%;
+        height: 100%;
         position: absolute;
         top: 0;
         left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.3);
     }
-}
-
-#player {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
 }

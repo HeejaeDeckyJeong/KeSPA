@@ -405,7 +405,7 @@ header {
   border-top: 10px solid #eee;
 }
 
-.indexPage1 .youtube {
+.indexwrap .indexPage1 .youtube {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -413,21 +413,20 @@ header {
   right: 0;
   z-index: -1;
 }
-.indexPage1 .inner {
+.indexwrap .indexPage1 .inner {
   height: 50%;
 }
-.indexPage1 .contents {
+.indexwrap .indexPage1 .contents {
   display: block;
   max-width: 1000px;
 }
-.indexPage1 .contents span,
-.indexPage1 .contents p,
-.indexPage1 .contents h2,
-.indexPage1 .contents a {
+.indexwrap .indexPage1 .contents span,
+.indexwrap .indexPage1 .contents p,
+.indexwrap .indexPage1 .contents h2,
+.indexwrap .indexPage1 .contents a {
   font-family: "Noto Sans KR", sans-serif;
 }
-
-.pagedown {
+.indexwrap .pagedown {
   position: relative;
   top: 0;
 }
@@ -436,13 +435,13 @@ header {
     transform: rotate(1turn);
   }
 }
-.pagedown .rotating-text {
+.indexwrap .pagedown .rotating-text {
   fill: #fff;
   animation: rotate 10s linear infinite;
   transform-origin: 50% 50%;
   transition: 1s fill;
 }
-.pagedown i {
+.indexwrap .pagedown i {
   color: #fff;
   position: absolute;
   top: 106px;
@@ -450,19 +449,17 @@ header {
   font-size: 67px;
   transition: 1s;
 }
-
-a:hover > .rotating-text {
+.indexwrap a:hover > .rotating-text {
   animation-play-state: paused;
   fill: #e60296;
 }
-a:hover > i {
+.indexwrap a:hover > i {
   color: #e60296;
 }
-
-.indexPage2 {
+.indexwrap .indexPage2 {
   background: url(/images/hof.webp) 0 0/cover no-repeat;
 }
-.indexPage2::before {
+.indexwrap .indexPage2::before {
   content: "";
   position: absolute;
   z-index: -10;
@@ -472,52 +469,51 @@ a:hover > i {
   bottom: 0;
   background-image: linear-gradient(to right, #000, rgba(0, 0, 0, 0));
 }
-.indexPage2 .contents {
+.indexwrap .indexPage2 .contents {
   display: block;
   width: 500px;
 }
-.indexPage2 .contents span,
-.indexPage2 .contents p,
-.indexPage2 .contents h2,
-.indexPage2 .contents a {
+.indexwrap .indexPage2 .contents span,
+.indexwrap .indexPage2 .contents p,
+.indexwrap .indexPage2 .contents h2,
+.indexwrap .indexPage2 .contents a {
   font-family: "Noto Sans KR", sans-serif;
   margin-top: 55px;
   text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3490196078) !important;
 }
-.indexPage2 p,
-.indexPage2 span {
+.indexwrap .indexPage2 p,
+.indexwrap .indexPage2 span {
   font-size: 18px;
 }
-.indexPage2 h2 {
+.indexwrap .indexPage2 h2 {
   font-size: 60px;
 }
-.indexPage2 a {
+.indexwrap .indexPage2 a {
   display: flex;
   font-size: 16px;
   align-items: center;
 }
-.indexPage2 a p {
+.indexwrap .indexPage2 a p {
   margin-bottom: 20px;
 }
-.indexPage2 .headline span,
-.indexPage2 .headline p,
-.indexPage2 .headline h2,
-.indexPage2 .headline a {
+.indexwrap .indexPage2 .headline span,
+.indexwrap .indexPage2 .headline p,
+.indexwrap .indexPage2 .headline h2,
+.indexwrap .indexPage2 .headline a {
   overflow: hidden;
   transition: line-height 1.5s cubic-bezier(0.77, 0, 0.175, 1);
   line-height: 3.5;
 }
-.indexPage2 .headline span {
+.indexwrap .indexPage2 .headline span {
   height: 15px;
   line-height: 11;
 }
-.indexPage2 .headline h2 {
+.indexwrap .indexPage2 .headline h2 {
   height: 130px;
 }
-.indexPage2 .headline p {
+.indexwrap .indexPage2 .headline p {
   height: 80px;
 }
-
 @keyframes shake {
   25% {
     transform: rotate(-5deg);
@@ -529,43 +525,43 @@ a:hover > i {
     transform: rotate(0deg);
   }
 }
-.indexPage3 {
+.indexwrap .indexPage3 {
   background: url(../../images/bnrNews2.png) -5% 0/auto 100% no-repeat, url(../../images/waterMark.png) 100% 100%/auto 338px no-repeat;
   background-color: #000;
 }
-.indexPage3 .inner {
+.indexwrap .indexPage3 .inner {
   display: flex;
   margin-top: 100px;
 }
-.indexPage3 .inner .contents {
+.indexwrap .indexPage3 .inner .contents {
   display: flex;
   justify-content: space-around;
 }
-.indexPage3 .inner .contents .headline {
+.indexwrap .indexPage3 .inner .contents .headline {
   display: block;
 }
-.indexPage3 .inner .contents .headline span,
-.indexPage3 .inner .contents .headline p,
-.indexPage3 .inner .contents .headline h2,
-.indexPage3 .inner .contents .headline a {
+.indexwrap .indexPage3 .inner .contents .headline span,
+.indexwrap .indexPage3 .inner .contents .headline p,
+.indexwrap .indexPage3 .inner .contents .headline h2,
+.indexwrap .indexPage3 .inner .contents .headline a {
   font-family: "Noto Sans KR", sans-serif;
   margin-top: 55px;
   text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3490196078) !important;
 }
-.indexPage3 .inner .contents .headline p,
-.indexPage3 .inner .contents .headline span {
+.indexwrap .indexPage3 .inner .contents .headline p,
+.indexwrap .indexPage3 .inner .contents .headline span {
   font-size: 18px;
 }
-.indexPage3 .inner .contents .headline h2 {
+.indexwrap .indexPage3 .inner .contents .headline h2 {
   font-size: 60px;
   margin-bottom: 80px;
 }
-.indexPage3 .inner .contents .headline a {
+.indexwrap .indexPage3 .inner .contents .headline a {
   display: flex;
   font-size: 16px;
   align-items: center;
 }
-.indexPage3 .inner .contents .headline a::after {
+.indexwrap .indexPage3 .inner .contents .headline a::after {
   content: "";
   width: 7px;
   height: 7px;
@@ -574,63 +570,61 @@ a:hover > i {
   margin-left: 10px;
   transform: translateY(1px);
 }
-.indexPage3 .inner .contents .display {
+.indexwrap .indexPage3 .inner .contents .display {
   max-width: 70%;
   font-size: 15px;
   margin-bottom: 2px;
 }
-.indexPage3 .inner .contents .display li {
+.indexwrap .indexPage3 .inner .contents .display li {
   margin-bottom: 20px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.indexPage3 .inner .contents .display li:first-child {
+.indexwrap .indexPage3 .inner .contents .display li:first-child {
   font-size: 26px;
 }
-
-.indexPage4 {
+.indexwrap .indexPage4 {
   background: url(../../images/huangzhou.png) 0 0/cover no-repeat;
 }
-.indexPage4 .contents {
+.indexwrap .indexPage4 .contents {
   display: block;
   width: 500px;
 }
-.indexPage4 .contents span,
-.indexPage4 .contents p,
-.indexPage4 .contents h2,
-.indexPage4 .contents a {
+.indexwrap .indexPage4 .contents span,
+.indexwrap .indexPage4 .contents p,
+.indexwrap .indexPage4 .contents h2,
+.indexwrap .indexPage4 .contents a {
   font-family: "Noto Sans KR", sans-serif;
   margin-top: 55px;
   text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3490196078) !important;
 }
-.indexPage4 p,
-.indexPage4 span {
+.indexwrap .indexPage4 p,
+.indexwrap .indexPage4 span {
   font-size: 18px;
 }
-.indexPage4 h2 {
+.indexwrap .indexPage4 h2 {
   font-size: 60px;
 }
-.indexPage4 a {
+.indexwrap .indexPage4 a {
   display: flex;
   font-size: 16px;
   align-items: center;
 }
-.indexPage4 a p {
+.indexwrap .indexPage4 a p {
   margin-bottom: 20px;
 }
-
-.scroll_nav {
+.indexwrap .scroll_nav {
   display: block;
   position: fixed;
   bottom: 50px;
   left: 100px;
   z-index: 500;
 }
-.scroll_nav ul {
+.indexwrap .scroll_nav ul {
   display: flex;
 }
-.scroll_nav ul li {
+.indexwrap .scroll_nav ul li {
   position: relative;
   font-weight: bold;
   font-size: 14px;
@@ -643,12 +637,12 @@ a:hover > i {
   width: auto;
   transition: 0.5s;
 }
-.scroll_nav ul li span {
+.indexwrap .scroll_nav ul li span {
   display: inline-block;
   width: 0;
   overflow: hidden;
 }
-.scroll_nav ul li::after {
+.indexwrap .scroll_nav ul li::after {
   content: "";
   position: absolute;
   top: 37%;
@@ -661,36 +655,35 @@ a:hover > i {
   border-radius: 50%;
   transition: 0.5s;
 }
-.scroll_nav ul li.active::after {
+.indexwrap .scroll_nav ul li.active::after {
   background: #e60296 !important;
   border-color: #e60296 !important;
 }
-.scroll_nav ul li:hover::after {
+.indexwrap .scroll_nav ul li:hover::after {
   background: #999;
   border-color: #999;
 }
-.scroll_nav ul li span {
+.indexwrap .scroll_nav ul li span {
   display: inline-block;
   width: 0;
   overflow: hidden;
 }
-.scroll_nav ul li.active span {
+.indexwrap .scroll_nav ul li.active span {
   color: #e60296 !important;
   width: 100%;
 }
-.scroll_nav ul li:hover span {
+.indexwrap .scroll_nav ul li:hover span {
   color: #999;
   transition: all 0.3s;
   width: 100%;
 }
-
-.youtube {
+.indexwrap .youtube {
   position: relative;
   height: 100vh;
   background-color: #333;
   overflow: hidden;
 }
-.youtube .youtube__area {
+.indexwrap .youtube .youtube__area {
   width: 1920px;
   position: absolute;
   /* 16비율 */
@@ -699,7 +692,7 @@ a:hover > i {
   top: 50%;
   margin-top: -540px;
 }
-.youtube .youtube__area::before {
+.indexwrap .youtube .youtube__area::before {
   content: "";
   display: block;
   /* 16:9 영상 비율로 요소 크기 만들기! */
@@ -707,7 +700,7 @@ a:hover > i {
   height: 0;
   padding-top: 56.25%;
 }
-.youtube .youtube__cover {
+.indexwrap .youtube .youtube__cover {
   position: absolute;
   top: 0;
   left: 0;
@@ -715,8 +708,7 @@ a:hover > i {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3);
 }
-
-#player {
+.indexwrap #player {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -915,50 +907,49 @@ a:hover > i {
     transform: rotate(0deg);
   }
 }
-.hofPage1 {
+.hofwrap .hofPage1 {
   background: url(../../images/indexHOF.png) 0 0/cover no-repeat;
 }
-.hofPage1 .contents {
+.hofwrap .hofPage1 .contents {
   display: block;
   max-width: 1000px;
   margin-top: 200px;
 }
-.hofPage1 .contents span,
-.hofPage1 .contents p,
-.hofPage1 .contents h2,
-.hofPage1 .contents a {
+.hofwrap .hofPage1 .contents span,
+.hofwrap .hofPage1 .contents p,
+.hofwrap .hofPage1 .contents h2,
+.hofwrap .hofPage1 .contents a {
   font-family: "Anton", sans-serif;
   height: 120px;
 }
-.hofPage1 .contents p {
+.hofwrap .hofPage1 .contents p {
   font-size: 100px;
 }
-.hofPage1 .contents h2 {
+.hofwrap .hofPage1 .contents h2 {
   margin-top: 0;
   font-size: 110px;
 }
-
-.hofPage2 {
+.hofwrap .hofPage2 {
   background: #000;
 }
-.hofPage2 .inner {
+.hofwrap .hofPage2 .inner {
   position: relative;
   overflow: hidden;
 }
-.hofPage2 .inner .compositionBox_1,
-.hofPage2 .inner .compositionBox_2,
-.hofPage2 .inner .compositionBox_3,
-.hofPage2 .inner .compositionBox_4 {
+.hofwrap .hofPage2 .inner .compositionBox_1,
+.hofwrap .hofPage2 .inner .compositionBox_2,
+.hofwrap .hofPage2 .inner .compositionBox_3,
+.hofwrap .hofPage2 .inner .compositionBox_4 {
   position: relative;
   overflow: visible;
   box-shadow: rgba(0, 0, 0, 0.4470588235) 1px 1px 1px 1px;
   transform: translateX(3000px);
   transition: transform 0.8s ease-out, width 0.8ms ease-out;
 }
-.hofPage2 .inner .compositionBox_1 .compositionText,
-.hofPage2 .inner .compositionBox_2 .compositionText,
-.hofPage2 .inner .compositionBox_3 .compositionText,
-.hofPage2 .inner .compositionBox_4 .compositionText {
+.hofwrap .hofPage2 .inner .compositionBox_1 .compositionText,
+.hofwrap .hofPage2 .inner .compositionBox_2 .compositionText,
+.hofwrap .hofPage2 .inner .compositionBox_3 .compositionText,
+.hofwrap .hofPage2 .inner .compositionBox_4 .compositionText {
   position: absolute;
   top: 80px;
   left: 50%;
@@ -969,19 +960,19 @@ a:hover > i {
   line-height: 2;
   flex-direction: column;
 }
-.hofPage2 .inner .compositionBox_1 .compositionText .comp_cont,
-.hofPage2 .inner .compositionBox_2 .compositionText .comp_cont,
-.hofPage2 .inner .compositionBox_3 .compositionText .comp_cont,
-.hofPage2 .inner .compositionBox_4 .compositionText .comp_cont {
+.hofwrap .hofPage2 .inner .compositionBox_1 .compositionText .comp_cont,
+.hofwrap .hofPage2 .inner .compositionBox_2 .compositionText .comp_cont,
+.hofwrap .hofPage2 .inner .compositionBox_3 .compositionText .comp_cont,
+.hofwrap .hofPage2 .inner .compositionBox_4 .compositionText .comp_cont {
   margin-top: 16px;
   opacity: 0;
   transition: opacity 0.1ms;
   white-space: nowrap;
 }
-.hofPage2 .inner .compositionBox_1 .comp_name,
-.hofPage2 .inner .compositionBox_2 .comp_name,
-.hofPage2 .inner .compositionBox_3 .comp_name,
-.hofPage2 .inner .compositionBox_4 .comp_name {
+.hofwrap .hofPage2 .inner .compositionBox_1 .comp_name,
+.hofwrap .hofPage2 .inner .compositionBox_2 .comp_name,
+.hofwrap .hofPage2 .inner .compositionBox_3 .comp_name,
+.hofwrap .hofPage2 .inner .compositionBox_4 .comp_name {
   position: absolute;
   bottom: 0px;
   left: 0;
@@ -991,35 +982,34 @@ a:hover > i {
   text-transform: uppercase;
   white-space: nowrap;
 }
-.hofPage2 .inner .compositionBox_1 {
+.hofwrap .hofPage2 .inner .compositionBox_1 {
   background: #111010 url(../../images/ex_img01.jpg) 0 center/cover no-repeat;
 }
-.hofPage2 .inner .compositionBox_2 {
+.hofwrap .hofPage2 .inner .compositionBox_2 {
   background: #111010 url(../../images/ex_img02.jpg) 0 center/cover no-repeat;
 }
-.hofPage2 .inner .compositionBox_3 {
+.hofwrap .hofPage2 .inner .compositionBox_3 {
   background: #111010 url(../../images/ex_img03.jpg) 0 center/cover no-repeat;
 }
-.hofPage2 .inner .compositionBox_4 {
+.hofwrap .hofPage2 .inner .compositionBox_4 {
   background: #111010 url(../../images/ex_img04.jpg) 0 center/cover no-repeat;
 }
-
-.hofPage2.active .compositionBox_1,
-.hofPage2.active .compositionBox_2,
-.hofPage2.active .compositionBox_3,
-.hofPage2.active .compositionBox_4 {
+.hofwrap .hofPage2.active .compositionBox_1,
+.hofwrap .hofPage2.active .compositionBox_2,
+.hofwrap .hofPage2.active .compositionBox_3,
+.hofwrap .hofPage2.active .compositionBox_4 {
   transform: translateX(0);
 }
-.hofPage2.active .compositionBox_1,
-.hofPage2.active .compositionBox_2,
-.hofPage2.active .compositionBox_3,
-.hofPage2.active .compositionBox_4 {
+.hofwrap .hofPage2.active .compositionBox_1,
+.hofwrap .hofPage2.active .compositionBox_2,
+.hofwrap .hofPage2.active .compositionBox_3,
+.hofwrap .hofPage2.active .compositionBox_4 {
   position: relative;
 }
-.hofPage2.active .compositionBox_1::after,
-.hofPage2.active .compositionBox_2::after,
-.hofPage2.active .compositionBox_3::after,
-.hofPage2.active .compositionBox_4::after {
+.hofwrap .hofPage2.active .compositionBox_1::after,
+.hofwrap .hofPage2.active .compositionBox_2::after,
+.hofwrap .hofPage2.active .compositionBox_3::after,
+.hofwrap .hofPage2.active .compositionBox_4::after {
   content: "";
   position: absolute;
   z-index: 1;
@@ -1031,8 +1021,7 @@ a:hover > i {
   opacity: 0;
   transition: opacity 0.5s;
 }
-
-.hofPage2 .inner .compositionBox {
+.hofwrap .hofPage2 .inner .compositionBox {
   display: flex;
   max-width: 80%;
   height: 400px;
@@ -1040,7 +1029,7 @@ a:hover > i {
   justify-content: space-around;
   align-items: end;
 }
-.hofPage2 .inner .compositionBox > div {
+.hofwrap .hofPage2 .inner .compositionBox > div {
   display: flex;
   width: 20%;
   height: 400px;
@@ -1048,10 +1037,10 @@ a:hover > i {
   box-shadow: rgba(0, 0, 0, 0.4470588235) 1px 1px 1px 1px;
   align-items: end;
 }
-.hofPage2 .inner .compositionBox .compositionBox_1:hover {
+.hofwrap .hofPage2 .inner .compositionBox .compositionBox_1:hover {
   width: 55%;
 }
-.hofPage2 .inner .compositionBox .compositionBox_1:hover::after {
+.hofwrap .hofPage2 .inner .compositionBox .compositionBox_1:hover::after {
   content: "";
   position: absolute;
   z-index: 1;
@@ -1062,22 +1051,22 @@ a:hover > i {
   background: rgba(0, 0, 0, 0.8588235294);
   opacity: 1;
 }
-.hofPage2 .inner .compositionBox .compositionBox_1:hover .compositionText .comp_cont {
+.hofwrap .hofPage2 .inner .compositionBox .compositionBox_1:hover .compositionText .comp_cont {
   opacity: 1;
 }
-.hofPage2 .inner .compositionBox .compositionBox_1:hover ~ .compositionBox_2 {
+.hofwrap .hofPage2 .inner .compositionBox .compositionBox_1:hover ~ .compositionBox_2 {
   width: 18%;
 }
-.hofPage2 .inner .compositionBox .compositionBox_1:hover ~ .compositionBox_3 {
+.hofwrap .hofPage2 .inner .compositionBox .compositionBox_1:hover ~ .compositionBox_3 {
   width: 18%;
 }
-.hofPage2 .inner .compositionBox .compositionBox_1:hover ~ .compositionBox_4 {
+.hofwrap .hofPage2 .inner .compositionBox .compositionBox_1:hover ~ .compositionBox_4 {
   width: 18%;
 }
-.hofPage2 .inner .compositionBox .compositionBox_2:hover {
+.hofwrap .hofPage2 .inner .compositionBox .compositionBox_2:hover {
   width: 55%;
 }
-.hofPage2 .inner .compositionBox .compositionBox_2:hover::after {
+.hofwrap .hofPage2 .inner .compositionBox .compositionBox_2:hover::after {
   content: "";
   position: absolute;
   z-index: 1;
@@ -1088,22 +1077,22 @@ a:hover > i {
   background: rgba(0, 0, 0, 0.8588235294);
   opacity: 1;
 }
-.hofPage2 .inner .compositionBox .compositionBox_2:hover .compositionText .comp_cont {
+.hofwrap .hofPage2 .inner .compositionBox .compositionBox_2:hover .compositionText .comp_cont {
   opacity: 1;
 }
-.hofPage2 .inner .compositionBox .compositionBox_2:hover ~ .compositionBox_1 {
+.hofwrap .hofPage2 .inner .compositionBox .compositionBox_2:hover ~ .compositionBox_1 {
   width: 18%;
 }
-.hofPage2 .inner .compositionBox .compositionBox_2:hover ~ .compositionBox_3 {
+.hofwrap .hofPage2 .inner .compositionBox .compositionBox_2:hover ~ .compositionBox_3 {
   width: 18%;
 }
-.hofPage2 .inner .compositionBox .compositionBox_2:hover ~ .compositionBox_4 {
+.hofwrap .hofPage2 .inner .compositionBox .compositionBox_2:hover ~ .compositionBox_4 {
   width: 18%;
 }
-.hofPage2 .inner .compositionBox .compositionBox_3:hover {
+.hofwrap .hofPage2 .inner .compositionBox .compositionBox_3:hover {
   width: 55%;
 }
-.hofPage2 .inner .compositionBox .compositionBox_3:hover::after {
+.hofwrap .hofPage2 .inner .compositionBox .compositionBox_3:hover::after {
   content: "";
   position: absolute;
   z-index: 1;
@@ -1114,22 +1103,22 @@ a:hover > i {
   background: rgba(0, 0, 0, 0.8588235294);
   opacity: 1;
 }
-.hofPage2 .inner .compositionBox .compositionBox_3:hover .compositionText .comp_cont {
+.hofwrap .hofPage2 .inner .compositionBox .compositionBox_3:hover .compositionText .comp_cont {
   opacity: 1;
 }
-.hofPage2 .inner .compositionBox .compositionBox_3:hover ~ .compositionBox_1 {
+.hofwrap .hofPage2 .inner .compositionBox .compositionBox_3:hover ~ .compositionBox_1 {
   width: 18%;
 }
-.hofPage2 .inner .compositionBox .compositionBox_3:hover ~ .compositionBox_2 {
+.hofwrap .hofPage2 .inner .compositionBox .compositionBox_3:hover ~ .compositionBox_2 {
   width: 18%;
 }
-.hofPage2 .inner .compositionBox .compositionBox_3:hover ~ .compositionBox_4 {
+.hofwrap .hofPage2 .inner .compositionBox .compositionBox_3:hover ~ .compositionBox_4 {
   width: 18%;
 }
-.hofPage2 .inner .compositionBox .compositionBox_4:hover {
+.hofwrap .hofPage2 .inner .compositionBox .compositionBox_4:hover {
   width: 55%;
 }
-.hofPage2 .inner .compositionBox .compositionBox_4:hover::after {
+.hofwrap .hofPage2 .inner .compositionBox .compositionBox_4:hover::after {
   content: "";
   position: absolute;
   z-index: 1;
@@ -1140,32 +1129,31 @@ a:hover > i {
   background: rgba(0, 0, 0, 0.8588235294);
   opacity: 1;
 }
-.hofPage2 .inner .compositionBox .compositionBox_4:hover .compositionText .comp_cont {
+.hofwrap .hofPage2 .inner .compositionBox .compositionBox_4:hover .compositionText .comp_cont {
   opacity: 1;
 }
-.hofPage2 .inner .compositionBox .compositionBox_4:hover ~ .compositionBox_1 {
+.hofwrap .hofPage2 .inner .compositionBox .compositionBox_4:hover ~ .compositionBox_1 {
   width: 18%;
 }
-.hofPage2 .inner .compositionBox .compositionBox_4:hover ~ .compositionBox_2 {
+.hofwrap .hofPage2 .inner .compositionBox .compositionBox_4:hover ~ .compositionBox_2 {
   width: 18%;
 }
-.hofPage2 .inner .compositionBox .compositionBox_4:hover ~ .compositionBox_3 {
+.hofwrap .hofPage2 .inner .compositionBox .compositionBox_4:hover ~ .compositionBox_3 {
   width: 18%;
 }
-
-.hofpage3 {
+.hofwrap .hofpage3 {
   background: #000;
 }
-.hofpage3 .inner {
+.hofwrap .hofpage3 .inner {
   display: flex;
   flex-direction: column;
 }
-.hofpage3 .inner .contents {
+.hofwrap .hofpage3 .inner .contents {
   width: 80%;
   height: 100%;
   margin: 40px auto 0;
 }
-.hofpage3 .inner .contents .hof_bnr_info {
+.hofwrap .hofpage3 .inner .contents .hof_bnr_info {
   display: flex;
   flex-direction: column;
   background: url(../../images/info_box.jpg) 0 0/cover no-repeat;
@@ -1175,28 +1163,28 @@ a:hover > i {
   align-items: center;
   line-height: 1.1;
 }
-.hofpage3 .inner .contents .hof_bnr_info span {
+.hofwrap .hofpage3 .inner .contents .hof_bnr_info span {
   color: #0162ff;
   margin-bottom: 18px;
 }
-.hofpage3 .inner .contents .infobox {
+.hofwrap .hofpage3 .inner .contents .infobox {
   display: flex;
   justify-content: space-around;
 }
-.hofpage3 .inner .contents .infobox > div {
+.hofwrap .hofpage3 .inner .contents .infobox > div {
   position: relative;
   width: 32%;
   margin-top: 50px;
   padding-left: 12px;
 }
-.hofpage3 .inner .contents .infobox > div ul li {
+.hofwrap .hofpage3 .inner .contents .infobox > div ul li {
   list-style-type: circle;
   margin-top: 3px;
 }
-.hofpage3 .inner .contents .infobox > div ul li:first-child {
+.hofwrap .hofpage3 .inner .contents .infobox > div ul li:first-child {
   margin-top: 20px;
 }
-.hofpage3 .inner .contents .infobox > div::before {
+.hofwrap .hofpage3 .inner .contents .infobox > div::before {
   content: "";
   position: absolute;
   top: 10px;
@@ -1205,10 +1193,10 @@ a:hover > i {
   height: 80%;
   background: #eee;
 }
-.hofpage3 .inner .contents .infobox > div:first-child::before {
+.hofwrap .hofpage3 .inner .contents .infobox > div:first-child::before {
   display: none;
 }
-.hofpage3 .inner .contents .infobox .infobox2 a {
+.hofwrap .hofpage3 .inner .contents .infobox .infobox2 a {
   display: flex;
   width: 146px;
   height: 61px;
@@ -1218,68 +1206,136 @@ a:hover > i {
   align-items: center;
   box-shadow: 1px 1px #3d3838;
 }
-
-.hofpage4 {
+.hofwrap .hofpage4 {
   background: #000;
 }
-.hofpage4 .inner {
+.hofwrap .hofpage4 .inner {
   position: relative;
 }
-.hofpage4 .inner .contents {
+.hofwrap .hofpage4 .inner .contents {
   font-family: "Anton", sans-serif;
   position: absolute;
   bottom: 150px;
   line-height: 1.1;
 }
-.hofpage4 .inner .contents h2,
-.hofpage4 .inner .contents p {
+.hofwrap .hofpage4 .inner .contents h2,
+.hofwrap .hofpage4 .inner .contents p {
   font-size: 36px;
 }
-.hofpage4 .inner .contents .txtLocation1 {
+.hofwrap .hofpage4 .inner .contents .txtLocation1 {
   display: flex;
   align-items: end;
 }
-.hofpage4 .inner .contents .txtLocation1 p {
+.hofwrap .hofpage4 .inner .contents .txtLocation1 p {
   color: #0162ff;
 }
-.hofpage4 .inner .contents .txtLocation2 {
+.hofwrap .hofpage4 .inner .contents .txtLocation2 {
   margin-top: 19px;
   font-size: 19px;
 }
-.hofpage4 .inner .contents .txtLocation2 h3 {
+.hofwrap .hofpage4 .inner .contents .txtLocation2 h3 {
   font-family: "Noto Sans KR", sans-serif;
 }
-.hofpage4 .inner .map .googlemap {
+.hofwrap .hofpage4 .inner .map .googlemap {
   position: absolute;
   width: 800px;
   height: 600px;
   top: 100px;
   right: 0;
 }
-
-.inner {
+.hofwrap .inner {
   padding-top: 100px;
   height: calc(100% - 100px);
 }
-.inner .hof_tit .hof_tit1 {
+.hofwrap .inner .hof_tit .hof_tit1 {
   font-family: "Noto Sans KR", sans-serif;
   color: #0162ff;
 }
-.inner .hof_tit .hof_tit2 {
+.hofwrap .inner .hof_tit .hof_tit2 {
   font-family: "Anton", sans-serif;
   color: #fff;
   text-transform: uppercase;
 }
-
-.hof_nav ul li.active::after {
+.hofwrap .hof_nav ul li.active::after {
   background: #458dff !important;
   border-color: #458dff !important;
 }
-
-.hof_nav ul li.active span {
+.hofwrap .hof_nav ul li.active span {
   color: #458dff !important;
 }
 
 .book {
   background: #000;
+}
+
+#main {
+  background: #fff;
+}
+#main .bnr_news {
+  display: flex;
+  background: url(../../images/pic_bnr.png) 30% center/cover no-repeat;
+  width: 100%;
+  height: 341px;
+  align-items: center;
+  justify-content: center;
+}
+#main .bnr_news h2 {
+  text-transform: capitalize;
+}
+#main .inner {
+  background: #fff;
+  max-width: 1440px;
+  margin: 10px auto;
+}
+#main .inner p,
+#main .inner span,
+#main .inner a,
+#main .inner h1,
+#main .inner h2,
+#main .inner h3,
+#main .inner i {
+  color: #000;
+}
+#main .inner .newsTop {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  border-bottom: 1px solid #000;
+}
+#main .inner .newsTop .newsMenu {
+  width: 60%;
+  color: #000;
+}
+#main .inner .newsTop .newsMenu span::before {
+  position: absolute;
+  top: 11px;
+  left: -7px;
+  content: "";
+  display: flex;
+  width: 2px;
+  height: 2px;
+  background: #000;
+  border-radius: 25px;
+}
+#main .inner .newsTop .newsMenu span {
+  position: relative;
+  margin-right: 10px;
+}
+#main .inner .newsTop .newsMenu span:first-child::before {
+  display: none;
+}
+#main .inner .newsTop .newsSearch {
+  width: 40%;
+}
+#main .inner .newsTop .newsSearch .searchbox {
+  display: flex;
+  justify-content: flex-end;
+}
+#main .inner .newsTop .newsSearch .searchbox p {
+  white-space: nowrap;
+  padding-right: 6px;
+}
+#main .inner .newsTop .newsSearch .searchbox i {
+  line-height: 1.7;
+  margin-right: 20%;
 }/*# sourceMappingURL=comm.css.map */
