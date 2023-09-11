@@ -15,7 +15,7 @@
         .contents {
             display: block;
             max-width: 1000px;
-
+            padding-top: 200px;
             span,
             p,
             h2,
@@ -27,7 +27,6 @@
 
     .pagedown {
         position: relative;
-        top: 0;
         @keyframes rotate {
             100% {
                 transform: rotate(1turn);

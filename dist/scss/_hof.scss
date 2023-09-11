@@ -364,6 +364,71 @@
             }
         }
     }
+    .scroll_nav {
+        display: block;
+        position: fixed;
+        bottom: 50px;
+        left: 100px;
+        z-index: 500;
+
+        ul {
+            display: flex;
+
+            li {
+                position: relative;
+                font-weight: bold;
+                font-size: 14px;
+                margin-right: 10px;
+                color: #000;
+                text-transform: uppercase;
+                box-sizing: border-box;
+                padding-left: 15px;
+                cursor: pointer;
+                width: auto;
+                transition: 0.5s;
+                span {
+                    display: inline-block;
+                    width: 0;
+                    overflow: hidden;
+                }
+            }
+            li::after {
+                content: '';
+                position: absolute;
+                top: 37%;
+                left: 0;
+                transform: translateY(-50%);
+                width: 6px;
+                height: 6px;
+                box-sizing: border-box;
+                border: 1px solid #999;
+                border-radius: 50%;
+                transition: 0.5s;
+            }
+            li.active::after {
+                background: #e60296 !important;
+                border-color: #e60296 !important;
+            }
+            li:hover::after {
+                background: #999;
+                border-color: #999;
+            }
+            li span {
+                display: inline-block;
+                width: 0;
+                overflow: hidden;
+            }
+            li.active span {
+                color: #e60296 !important;
+                width: 100%;
+            }
+            li:hover span {
+                color: #999;
+                transition: all 0.3s;
+                width: 100%;
+            }
+        }
+    }
 
     .hof_nav ul li.active::after {
         background: #458dff !important;
