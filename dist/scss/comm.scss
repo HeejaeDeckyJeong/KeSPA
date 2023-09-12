@@ -55,7 +55,11 @@ header {
         height: 110px;
     }
 }
-
+.page1.active {
+    .contents {
+        line-height: 3.5;
+    }
+}
 .page2 {
     position: relative;
     z-index: 0;

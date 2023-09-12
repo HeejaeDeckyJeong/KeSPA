@@ -249,7 +249,7 @@
                 .hof_bnr_info {
                     display: flex;
                     flex-direction: column;
-                    background: url(../../images/info_box.jpg) 0 0 / cover no-repeat;
+                    background: url(../../images/info_box.jpg) right 0 / cover no-repeat;
                     width: 100%;
                     height: 40%;
                     justify-content: center;
@@ -436,5 +436,87 @@
     }
     .hof_nav ul li.active span {
         color: #458dff !important;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .page1 .contents span,
+    .page1 .contents p,
+    .page1 .contents h2,
+    .page1 .contents a {
+        overflow: visible;
+    }
+    .hofwrap {
+        .hof_tit {
+            padding-left: 16px;
+        }
+        .hofPage1 {
+            .inner {
+                width: 90%;
+            }
+        }
+        .hofPage2 {
+            .inner {
+                .compositionBox {
+                    flex-direction: column;
+                    height: 55vh;
+                    padding-bottom: 50px;
+
+                    div {
+                        width: 100%;
+                        .comp_cont {
+                            display: none;
+                        }
+                    }
+                    .compositionBox_1:hover {
+                        width: 100%;
+                        & ~ .compositionBox_2 {
+                            width: 100%;
+                        }
+                        & ~ .compositionBox_3 {
+                            width: 100%;
+                        }
+                        & ~ .compositionBox_4 {
+                            width: 100%;
+                        }
+                    }
+                    .compositionBox_2:hover {
+                        width: 100%;
+                        & ~ .compositionBox_1 {
+                            width: 100%;
+                        }
+                        & ~ .compositionBox_3 {
+                            width: 100%;
+                        }
+                        & ~ .compositionBox_4 {
+                            width: 100%;
+                        }
+                    }
+                    .compositionBox_3:hover {
+                        width: 100%;
+                        & ~ .compositionBox_1 {
+                            width: 100%;
+                        }
+                        & ~ .compositionBox_2 {
+                            width: 100%;
+                        }
+                        & ~ .compositionBox_4 {
+                            width: 100%;
+                        }
+                    }
+                    .compositionBox_4:hover {
+                        width: 100%;
+                        & ~ .compositionBox_1 {
+                            width: 100%;
+                        }
+                        & ~ .compositionBox_3 {
+                            width: 100%;
+                        }
+                        & ~ .compositionBox_4 {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

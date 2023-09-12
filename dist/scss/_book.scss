@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
 body .wrap .book {
+    padding-top: 80px;
     background: #000;
-
     .section {
         position: relative;
         background: #000;
@@ -20,6 +20,8 @@ body .wrap .book {
 
     #booking {
         font-family: 'Raleway', sans-serif;
+        background: url(../../images/waterMark.png) 100% 100% / auto 338px no-repeat;
+        background-color: #000;
     }
 
     .booking-form {
@@ -34,17 +36,6 @@ body .wrap .book {
         border-radius: 5px;
         z-index: 20;
 
-        &::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            top: 0;
-            background: rgba(0, 0, 0, 0.7);
-            z-index: -1;
-        }
-
         .form-header {
             text-align: center;
             position: relative;
@@ -56,6 +47,10 @@ body .wrap .book {
                 font-size: 42px;
                 margin: 0px;
                 color: #fff;
+            }
+            & h1:last-child {
+                font-size: 38px;
+                color: #0162ff;
             }
         }
 
@@ -89,6 +84,19 @@ body .wrap .book {
         }
 
         input[type='date'].form-control {
+            padding-top: 16px;
+
+            &:invalid {
+                color: rgba(255, 255, 255, 0.5);
+            }
+
+            + .form-label {
+                opacity: 1;
+                top: 10px;
+            }
+        }
+
+        input[type='time'].form-control {
             padding-top: 16px;
 
             &:invalid {
@@ -142,7 +150,7 @@ body .wrap .book {
             top: -10px;
             left: 25px;
             opacity: 0;
-            color: #ff8846;
+            color: #0162ff;
             font-size: 11px;
             font-weight: 700;
             text-transform: uppercase;
@@ -166,7 +174,7 @@ body .wrap .book {
 
         .submit-btn {
             color: #fff;
-            background-color: #e35e0a;
+            background-color: #0162ff;
             font-weight: 700;
             height: 60px;
             padding: 10px 30px;

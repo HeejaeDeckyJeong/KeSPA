@@ -355,6 +355,10 @@ header {
   height: 110px;
 }
 
+.page1.active .contents {
+  line-height: 3.5;
+}
+
 .page2 {
   position: relative;
   z-index: 0;
@@ -1156,7 +1160,7 @@ header {
 .hofwrap .hofpage3 .inner .contents .hof_bnr_info {
   display: flex;
   flex-direction: column;
-  background: url(../../images/info_box.jpg) 0 0/cover no-repeat;
+  background: url(../../images/info_box.jpg) right 0/cover no-repeat;
   width: 100%;
   height: 40%;
   justify-content: center;
@@ -1327,7 +1331,81 @@ header {
   color: #458dff !important;
 }
 
+@media screen and (max-width: 1024px) {
+  .page1 .contents span,
+  .page1 .contents p,
+  .page1 .contents h2,
+  .page1 .contents a {
+    overflow: visible;
+  }
+  .hofwrap .hof_tit {
+    padding-left: 16px;
+  }
+  .hofwrap .hofPage1 .inner {
+    width: 90%;
+  }
+  .hofwrap .hofPage2 .inner .compositionBox {
+    flex-direction: column;
+    height: 55vh;
+    padding-bottom: 50px;
+  }
+  .hofwrap .hofPage2 .inner .compositionBox div {
+    width: 100%;
+  }
+  .hofwrap .hofPage2 .inner .compositionBox div .comp_cont {
+    display: none;
+  }
+  .hofwrap .hofPage2 .inner .compositionBox .compositionBox_1:hover {
+    width: 100%;
+  }
+  .hofwrap .hofPage2 .inner .compositionBox .compositionBox_1:hover ~ .compositionBox_2 {
+    width: 100%;
+  }
+  .hofwrap .hofPage2 .inner .compositionBox .compositionBox_1:hover ~ .compositionBox_3 {
+    width: 100%;
+  }
+  .hofwrap .hofPage2 .inner .compositionBox .compositionBox_1:hover ~ .compositionBox_4 {
+    width: 100%;
+  }
+  .hofwrap .hofPage2 .inner .compositionBox .compositionBox_2:hover {
+    width: 100%;
+  }
+  .hofwrap .hofPage2 .inner .compositionBox .compositionBox_2:hover ~ .compositionBox_1 {
+    width: 100%;
+  }
+  .hofwrap .hofPage2 .inner .compositionBox .compositionBox_2:hover ~ .compositionBox_3 {
+    width: 100%;
+  }
+  .hofwrap .hofPage2 .inner .compositionBox .compositionBox_2:hover ~ .compositionBox_4 {
+    width: 100%;
+  }
+  .hofwrap .hofPage2 .inner .compositionBox .compositionBox_3:hover {
+    width: 100%;
+  }
+  .hofwrap .hofPage2 .inner .compositionBox .compositionBox_3:hover ~ .compositionBox_1 {
+    width: 100%;
+  }
+  .hofwrap .hofPage2 .inner .compositionBox .compositionBox_3:hover ~ .compositionBox_2 {
+    width: 100%;
+  }
+  .hofwrap .hofPage2 .inner .compositionBox .compositionBox_3:hover ~ .compositionBox_4 {
+    width: 100%;
+  }
+  .hofwrap .hofPage2 .inner .compositionBox .compositionBox_4:hover {
+    width: 100%;
+  }
+  .hofwrap .hofPage2 .inner .compositionBox .compositionBox_4:hover ~ .compositionBox_1 {
+    width: 100%;
+  }
+  .hofwrap .hofPage2 .inner .compositionBox .compositionBox_4:hover ~ .compositionBox_3 {
+    width: 100%;
+  }
+  .hofwrap .hofPage2 .inner .compositionBox .compositionBox_4:hover ~ .compositionBox_4 {
+    width: 100%;
+  }
+}
 body .wrap .book {
+  padding-top: 80px;
   background: #000;
 }
 body .wrap .book .section {
@@ -1344,6 +1422,8 @@ body .wrap .book .section .section-center {
 }
 body .wrap .book #booking {
   font-family: "Raleway", sans-serif;
+  background: url(../../images/waterMark.png) 100% 100%/auto 338px no-repeat;
+  background-color: #000;
 }
 body .wrap .book .booking-form {
   position: relative;
@@ -1357,16 +1437,6 @@ body .wrap .book .booking-form {
   border-radius: 5px;
   z-index: 20;
 }
-body .wrap .book .booking-form::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  background: rgba(0, 0, 0, 0.7);
-  z-index: -1;
-}
 body .wrap .book .booking-form .form-header {
   text-align: center;
   position: relative;
@@ -1378,6 +1448,10 @@ body .wrap .book .booking-form .form-header h1 {
   font-size: 42px;
   margin: 0px;
   color: #fff;
+}
+body .wrap .book .booking-form .form-header h1:last-child {
+  font-size: 38px;
+  color: #0162ff;
 }
 body .wrap .book .booking-form .form-group {
   position: relative;
@@ -1406,6 +1480,16 @@ body .wrap .book .booking-form input[type=date].form-control:invalid {
   color: rgba(255, 255, 255, 0.5);
 }
 body .wrap .book .booking-form input[type=date].form-control + .form-label {
+  opacity: 1;
+  top: 10px;
+}
+body .wrap .book .booking-form input[type=time].form-control {
+  padding-top: 16px;
+}
+body .wrap .book .booking-form input[type=time].form-control:invalid {
+  color: rgba(255, 255, 255, 0.5);
+}
+body .wrap .book .booking-form input[type=time].form-control + .form-label {
   opacity: 1;
   top: 10px;
 }
@@ -1443,7 +1527,7 @@ body .wrap .book .booking-form .form-label {
   top: -10px;
   left: 25px;
   opacity: 0;
-  color: #ff8846;
+  color: #0162ff;
   font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
@@ -1461,7 +1545,7 @@ body .wrap .book .booking-form .form-group.input-not-empty .form-label {
 }
 body .wrap .book .booking-form .submit-btn {
   color: #fff;
-  background-color: #e35e0a;
+  background-color: #0162ff;
   font-weight: 700;
   height: 60px;
   padding: 10px 30px;
