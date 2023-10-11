@@ -318,9 +318,26 @@ legend {
 }
 header {
   position: fixed;
+  display: flex;
   z-index: 1;
+  width: 1500px;
   margin-top: 30px;
-  margin-left: 209px;
+  margin-left: calc(50vw - 750px);
+  color: #fff;
+  text-shadow: 0px 1px 1px #000;
+  justify-content: space-between;
+}
+header #logo {
+  margin-left: 10px;
+  display: block;
+}
+header #tnb {
+  display: flex;
+  align-items: center;
+  margin-right: 22px;
+}
+header #tnb a {
+  padding-left: 22px;
 }
 
 .page1 {
@@ -565,70 +582,63 @@ header {
   font-size: 16px;
   align-items: center;
 }
-.indexwrap .indexPage3 .inner .contents .headline a::after {
-  content: "";
-  width: 7px;
-  height: 7px;
-  border-radius: 25px;
-  background: #fff;
-  margin-left: 10px;
-  transform: translateY(1px);
-}
-.indexwrap .indexPage3 .inner .contents .display {
+.indexwrap .indexPage3 .inner .display {
   max-width: 70%;
   font-size: 15px;
   margin-bottom: 2px;
 }
-.indexwrap .indexPage3 .inner .contents .display li {
+.indexwrap .indexPage3 .inner .display li {
   margin-bottom: 20px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.indexwrap .indexPage3 .inner .contents .display li:first-child {
+.indexwrap .indexPage3 .inner .display li:first-child {
   font-size: 26px;
 }
-.indexwrap .indexPage4 {
+
+.indexPage4 {
   background: url(../../images/huangzhou.png) 0 0/cover no-repeat;
 }
-.indexwrap .indexPage4 .contents {
+.indexPage4 .contents {
   display: block;
   width: 500px;
 }
-.indexwrap .indexPage4 .contents span,
-.indexwrap .indexPage4 .contents p,
-.indexwrap .indexPage4 .contents h2,
-.indexwrap .indexPage4 .contents a {
+.indexPage4 .contents span,
+.indexPage4 .contents p,
+.indexPage4 .contents h2,
+.indexPage4 .contents a {
   font-family: "Noto Sans KR", sans-serif;
   margin-top: 55px;
   text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3490196078) !important;
 }
-.indexwrap .indexPage4 p,
-.indexwrap .indexPage4 span {
+.indexPage4 p,
+.indexPage4 span {
   font-size: 18px;
 }
-.indexwrap .indexPage4 h2 {
+.indexPage4 h2 {
   font-size: 60px;
 }
-.indexwrap .indexPage4 a {
+.indexPage4 a {
   display: flex;
   font-size: 16px;
   align-items: center;
 }
-.indexwrap .indexPage4 a p {
+.indexPage4 a p {
   margin-bottom: 20px;
 }
-.indexwrap .scroll_nav {
+
+.scroll_nav {
   display: block;
   position: fixed;
   bottom: 50px;
   left: 100px;
   z-index: 500;
 }
-.indexwrap .scroll_nav ul {
+.scroll_nav ul {
   display: flex;
 }
-.indexwrap .scroll_nav ul li {
+.scroll_nav ul li {
   position: relative;
   font-weight: bold;
   font-size: 14px;
@@ -641,12 +651,12 @@ header {
   width: auto;
   transition: 0.5s;
 }
-.indexwrap .scroll_nav ul li span {
+.scroll_nav ul li span {
   display: inline-block;
   width: 0;
   overflow: hidden;
 }
-.indexwrap .scroll_nav ul li::after {
+.scroll_nav ul li::after {
   content: "";
   position: absolute;
   top: 37%;
@@ -659,35 +669,36 @@ header {
   border-radius: 50%;
   transition: 0.5s;
 }
-.indexwrap .scroll_nav ul li.active::after {
+.scroll_nav ul li.active::after {
   background: #e60296 !important;
   border-color: #e60296 !important;
 }
-.indexwrap .scroll_nav ul li:hover::after {
+.scroll_nav ul li:hover::after {
   background: #999;
   border-color: #999;
 }
-.indexwrap .scroll_nav ul li span {
+.scroll_nav ul li span {
   display: inline-block;
   width: 0;
   overflow: hidden;
 }
-.indexwrap .scroll_nav ul li.active span {
+.scroll_nav ul li.active span {
   color: #e60296 !important;
   width: 100%;
 }
-.indexwrap .scroll_nav ul li:hover span {
+.scroll_nav ul li:hover span {
   color: #999;
   transition: all 0.3s;
   width: 100%;
 }
-.indexwrap .youtube {
+
+.youtube {
   position: relative;
   height: 100vh;
   background-color: #333;
   overflow: hidden;
 }
-.indexwrap .youtube .youtube__area {
+.youtube .youtube__area {
   width: 1920px;
   position: absolute;
   /* 16비율 */
@@ -696,7 +707,7 @@ header {
   top: 50%;
   margin-top: -540px;
 }
-.indexwrap .youtube .youtube__area::before {
+.youtube .youtube__area::before {
   content: "";
   display: block;
   /* 16:9 영상 비율로 요소 크기 만들기! */
@@ -704,7 +715,7 @@ header {
   height: 0;
   padding-top: 56.25%;
 }
-.indexwrap .youtube .youtube__cover {
+.youtube .youtube__cover {
   position: absolute;
   top: 0;
   left: 0;
@@ -712,7 +723,8 @@ header {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3);
 }
-.indexwrap #player {
+
+#player {
   width: 100%;
   height: 100%;
   position: absolute;
