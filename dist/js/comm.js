@@ -148,3 +148,10 @@ ELEMENTS.forEach((element, index) => {
         ELEMENTS_SPAN[index].style.top = e.pageY - element.offsetTop + 2 * 'px';
     });
 });
+function changeHeight() {
+    // 1. 대상 element 선택
+    const element = document.getElementById('footer');
+
+    // 2. style 변경
+    element.style.height = '150px';
+}

@@ -126,8 +126,31 @@ header {
 
 // footer
 #footer {
+    position: relative;
+    background: #1b1b1b;
+    z-index: 600;
+    padding: 30px 0;
     .inner {
-        border-top: 10px solid $gray-e;
+        width: 1500px;
+        margin: 0 auto;
+        height: 75px;
+        align-items: center;
+    }
+    .ft_top {
+        display: flex;
+        justify-content: space-between;
+        .ft_r {
+            display: flex;
+            a {
+                padding: 0 20px;
+            }
+        }
+    }
+    .ft_bottom {
+        padding-top: 10px;
+        p {
+            font-size: 14px;
+        }
     }
 }
 

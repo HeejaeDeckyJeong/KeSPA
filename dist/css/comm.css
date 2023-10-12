@@ -422,8 +422,33 @@ header #tnb a {
     opacity: 1;
   }
 }
+#footer {
+  position: relative;
+  background: #1b1b1b;
+  z-index: 600;
+  padding: 30px 0;
+}
 #footer .inner {
-  border-top: 10px solid #eee;
+  width: 1500px;
+  margin: 0 auto;
+  height: 75px;
+  align-items: center;
+}
+#footer .ft_top {
+  display: flex;
+  justify-content: space-between;
+}
+#footer .ft_top .ft_r {
+  display: flex;
+}
+#footer .ft_top .ft_r a {
+  padding: 0 20px;
+}
+#footer .ft_bottom {
+  padding-top: 10px;
+}
+#footer .ft_bottom p {
+  font-size: 14px;
 }
 
 .indexwrap .indexPage1 .youtube {
@@ -598,7 +623,7 @@ header #tnb a {
 }
 
 .indexPage4 {
-  background: url(../../images/huangzhou.png) 0 0/cover no-repeat;
+  background: url(../../images/huangzhou.png) -4px 0/calc(100% + 10px) no-repeat;
 }
 .indexPage4 .contents {
   display: block;
