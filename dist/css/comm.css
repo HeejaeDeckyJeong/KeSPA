@@ -503,7 +503,7 @@ header #tnb a {
   color: #e60296;
 }
 .indexwrap .indexPage2 {
-  background: url(/images/hof.webp) 0 0/cover no-repeat;
+  background: url(/images/hof.jpg) 0 0/cover no-repeat;
 }
 .indexwrap .indexPage2::before {
   content: "";
