@@ -465,7 +465,7 @@ header #tnb a {
 .indexwrap .indexPage1 .contents {
   display: block;
   max-width: 1000px;
-  padding-top: 200px;
+  padding-top: 120px;
 }
 .indexwrap .indexPage1 .contents span,
 .indexwrap .indexPage1 .contents p,
@@ -555,10 +555,10 @@ header #tnb a {
   line-height: 11;
 }
 .indexwrap .indexPage2 .headline h2 {
-  height: 130px;
+  height: 170px;
 }
 .indexwrap .indexPage2 .headline p {
-  height: 80px;
+  height: 110px;
 }
 @keyframes shake {
   25% {
@@ -613,6 +613,7 @@ header #tnb a {
   margin-bottom: 2px;
 }
 .indexwrap .indexPage3 .inner .display li {
+  margin-top: 20px;
   margin-bottom: 20px;
   white-space: nowrap;
   overflow: hidden;
@@ -931,10 +932,11 @@ header #tnb a {
 .section.active .inner .contents p,
 .section.active .inner .contents h2,
 .section.active .inner .contents a {
-  line-height: 1.1;
+  line-height: 1.5;
 }
 .section.active .inner .contents h2 {
   transition-delay: 0.4s;
+  height: 166px;
 }
 
 @keyframes shake {

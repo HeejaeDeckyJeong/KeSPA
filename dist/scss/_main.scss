@@ -15,7 +15,7 @@
         .contents {
             display: block;
             max-width: 1000px;
-            padding-top: 200px;
+            padding-top: 120px;
             span,
             p,
             h2,
@@ -114,10 +114,10 @@
                 line-height: 11;
             }
             h2 {
-                height: 130px;
+                height: 170px;
             }
             p {
-                height: 80px;
+                height: 110px;
             }
         }
     }
@@ -179,6 +179,7 @@
                 margin-bottom: 2px;
 
                 li {
+                    margin-top: 20px;
                     margin-bottom: 20px;
                     white-space: nowrap;
                     overflow: hidden;
