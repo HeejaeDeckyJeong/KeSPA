@@ -17,7 +17,7 @@
                 font-size: 100px;
             }
             h2 {
-                margin-top: 0;
+                margin-top: 10px;
                 font-size: 110px;
             }
         }
@@ -260,6 +260,9 @@
                         color: #0162ff;
                         margin-bottom: 18px;
                     }
+                    h2 {
+                        text-align: center;
+                    }
                 }
                 .infobox {
                     display: flex;
@@ -331,11 +334,15 @@
                     }
                 }
                 .txtLocation2 {
+                    font-family: 'Antonio', sans-serif;
                     margin-top: 19px;
                     font-size: 19px;
                     h3 {
-                        font-family: 'Noto Sans KR', sans-serif;
+                        margin-bottom: 20px;
                     }
+                }
+                h2 {
+                    height: 53px;
                 }
             }
             .map {
@@ -361,6 +368,7 @@
                 font-family: 'Anton', sans-serif;
                 color: #fff;
                 text-transform: uppercase;
+                margin-top: 16px;
             }
         }
     }

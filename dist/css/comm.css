@@ -970,7 +970,7 @@ header #tnb a {
   font-size: 100px;
 }
 .hofwrap .hofPage1 .contents h2 {
-  margin-top: 0;
+  margin-top: 10px;
   font-size: 110px;
 }
 .hofwrap .hofPage2 {
@@ -1211,6 +1211,9 @@ header #tnb a {
   color: #0162ff;
   margin-bottom: 18px;
 }
+.hofwrap .hofpage3 .inner .contents .hof_bnr_info h2 {
+  text-align: center;
+}
 .hofwrap .hofpage3 .inner .contents .infobox {
   display: flex;
   justify-content: space-around;
@@ -1274,11 +1277,15 @@ header #tnb a {
   color: #0162ff;
 }
 .hofwrap .hofpage4 .inner .contents .txtLocation2 {
+  font-family: "Antonio", sans-serif;
   margin-top: 19px;
   font-size: 19px;
 }
 .hofwrap .hofpage4 .inner .contents .txtLocation2 h3 {
-  font-family: "Noto Sans KR", sans-serif;
+  margin-bottom: 20px;
+}
+.hofwrap .hofpage4 .inner .contents h2 {
+  height: 53px;
 }
 .hofwrap .hofpage4 .inner .map .googlemap {
   position: absolute;
@@ -1299,6 +1306,7 @@ header #tnb a {
   font-family: "Anton", sans-serif;
   color: #fff;
   text-transform: uppercase;
+  margin-top: 16px;
 }
 .hofwrap .scroll_nav {
   display: block;
@@ -1613,7 +1621,9 @@ body .wrap .book .booking-form .submit-btn:hover, body .wrap .book .booking-form
   justify-content: center;
 }
 .news .bnr_news h2 {
+  font-size: 6rem;
   text-transform: capitalize;
+  margin-top: 85px;
 }
 .news .inner {
   max-width: 1440px;
